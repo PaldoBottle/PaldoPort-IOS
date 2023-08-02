@@ -1,0 +1,694 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D272F9E32A79A2890087C392 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272F9E22A79A2890087C392 /* AppDelegate.swift */; };
+		D272F9E52A79A2890087C392 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272F9E42A79A2890087C392 /* SceneDelegate.swift */; };
+		D272F9ED2A79A2890087C392 /* PaldoPort.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D272F9EB2A79A2890087C392 /* PaldoPort.xcdatamodeld */; };
+		D272F9EF2A79A2890087C392 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D272F9EE2A79A2890087C392 /* Assets.xcassets */; };
+		D272F9F22A79A2890087C392 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D272F9F02A79A2890087C392 /* LaunchScreen.storyboard */; };
+		D272F9FD2A79A2890087C392 /* PaldoPortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272F9FC2A79A2890087C392 /* PaldoPortTests.swift */; };
+		D272FA072A79A2890087C392 /* PaldoPortUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272FA062A79A2890087C392 /* PaldoPortUITests.swift */; };
+		D272FA092A79A2890087C392 /* PaldoPortUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272FA082A79A2890087C392 /* PaldoPortUITestsLaunchTests.swift */; };
+		D272FA202A79A9D20087C392 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272FA1F2A79A9D20087C392 /* MapViewController.swift */; };
+		D272FA222A79AA170087C392 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D272FA212A79AA170087C392 /* MapView.storyboard */; };
+		D272FA242A79AC190087C392 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D272FA232A79AC190087C392 /* Main.storyboard */; };
+		D272FA262A7A3CA90087C392 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272FA252A7A3CA80087C392 /* MapViewModel.swift */; };
+		D272FA282A7A3E7F0087C392 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272FA272A7A3E7F0087C392 /* Annotation.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D272F9F92A79A2890087C392 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D272F9D72A79A2890087C392 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D272F9DE2A79A2890087C392;
+			remoteInfo = PaldoPort;
+		};
+		D272FA032A79A2890087C392 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D272F9D72A79A2890087C392 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D272F9DE2A79A2890087C392;
+			remoteInfo = PaldoPort;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D272F9DF2A79A2890087C392 /* PaldoPort.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaldoPort.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D272F9E22A79A2890087C392 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D272F9E42A79A2890087C392 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D272F9EC2A79A2890087C392 /* PaldoPort.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PaldoPort.xcdatamodel; sourceTree = "<group>"; };
+		D272F9EE2A79A2890087C392 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D272F9F12A79A2890087C392 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D272F9F32A79A2890087C392 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D272F9F82A79A2890087C392 /* PaldoPortTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaldoPortTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D272F9FC2A79A2890087C392 /* PaldoPortTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaldoPortTests.swift; sourceTree = "<group>"; };
+		D272FA022A79A2890087C392 /* PaldoPortUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaldoPortUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D272FA062A79A2890087C392 /* PaldoPortUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaldoPortUITests.swift; sourceTree = "<group>"; };
+		D272FA082A79A2890087C392 /* PaldoPortUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaldoPortUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D272FA1F2A79A9D20087C392 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		D272FA212A79AA170087C392 /* MapView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
+		D272FA232A79AC190087C392 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D272FA252A7A3CA80087C392 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		D272FA272A7A3E7F0087C392 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D272F9DC2A79A2890087C392 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D272F9F52A79A2890087C392 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D272F9FF2A79A2890087C392 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D272F9D62A79A2890087C392 = {
+			isa = PBXGroup;
+			children = (
+				D272F9E12A79A2890087C392 /* PaldoPort */,
+				D272F9FB2A79A2890087C392 /* PaldoPortTests */,
+				D272FA052A79A2890087C392 /* PaldoPortUITests */,
+				D272F9E02A79A2890087C392 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D272F9E02A79A2890087C392 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D272F9DF2A79A2890087C392 /* PaldoPort.app */,
+				D272F9F82A79A2890087C392 /* PaldoPortTests.xctest */,
+				D272FA022A79A2890087C392 /* PaldoPortUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D272F9E12A79A2890087C392 /* PaldoPort */ = {
+			isa = PBXGroup;
+			children = (
+				D272F9F32A79A2890087C392 /* Info.plist */,
+				D272FA1D2A79A49E0087C392 /* Pages */,
+				D272FA1C2A79A46D0087C392 /* Utility */,
+				D272FA1B2A79A39A0087C392 /* Network */,
+				D272FA1A2A79A3920087C392 /* Model */,
+				D272FA192A79A3890087C392 /* Extension */,
+				D272FA172A79A3470087C392 /* App */,
+				D272FA162A79A2DA0087C392 /* Resource */,
+				D272F9EB2A79A2890087C392 /* PaldoPort.xcdatamodeld */,
+			);
+			path = PaldoPort;
+			sourceTree = "<group>";
+		};
+		D272F9FB2A79A2890087C392 /* PaldoPortTests */ = {
+			isa = PBXGroup;
+			children = (
+				D272F9FC2A79A2890087C392 /* PaldoPortTests.swift */,
+			);
+			path = PaldoPortTests;
+			sourceTree = "<group>";
+		};
+		D272FA052A79A2890087C392 /* PaldoPortUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D272FA062A79A2890087C392 /* PaldoPortUITests.swift */,
+				D272FA082A79A2890087C392 /* PaldoPortUITestsLaunchTests.swift */,
+			);
+			path = PaldoPortUITests;
+			sourceTree = "<group>";
+		};
+		D272FA162A79A2DA0087C392 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D272FA182A79A35B0087C392 /* Storyboards */,
+				D272F9EE2A79A2890087C392 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		D272FA172A79A3470087C392 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D272F9E22A79A2890087C392 /* AppDelegate.swift */,
+				D272F9E42A79A2890087C392 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D272FA182A79A35B0087C392 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D272F9F02A79A2890087C392 /* LaunchScreen.storyboard */,
+				D272FA212A79AA170087C392 /* MapView.storyboard */,
+				D272FA232A79AC190087C392 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D272FA192A79A3890087C392 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D272FA1A2A79A3920087C392 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D272FA272A7A3E7F0087C392 /* Annotation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D272FA1B2A79A39A0087C392 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D272FA1C2A79A46D0087C392 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		D272FA1D2A79A49E0087C392 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				D272FA1E2A79A56E0087C392 /* Map */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		D272FA1E2A79A56E0087C392 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				D272FA1F2A79A9D20087C392 /* MapViewController.swift */,
+				D272FA252A7A3CA80087C392 /* MapViewModel.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D272F9DE2A79A2890087C392 /* PaldoPort */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D272FA0C2A79A2890087C392 /* Build configuration list for PBXNativeTarget "PaldoPort" */;
+			buildPhases = (
+				D272F9DB2A79A2890087C392 /* Sources */,
+				D272F9DC2A79A2890087C392 /* Frameworks */,
+				D272F9DD2A79A2890087C392 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PaldoPort;
+			productName = PaldoPort;
+			productReference = D272F9DF2A79A2890087C392 /* PaldoPort.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D272F9F72A79A2890087C392 /* PaldoPortTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D272FA0F2A79A2890087C392 /* Build configuration list for PBXNativeTarget "PaldoPortTests" */;
+			buildPhases = (
+				D272F9F42A79A2890087C392 /* Sources */,
+				D272F9F52A79A2890087C392 /* Frameworks */,
+				D272F9F62A79A2890087C392 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D272F9FA2A79A2890087C392 /* PBXTargetDependency */,
+			);
+			name = PaldoPortTests;
+			productName = PaldoPortTests;
+			productReference = D272F9F82A79A2890087C392 /* PaldoPortTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D272FA012A79A2890087C392 /* PaldoPortUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D272FA122A79A2890087C392 /* Build configuration list for PBXNativeTarget "PaldoPortUITests" */;
+			buildPhases = (
+				D272F9FE2A79A2890087C392 /* Sources */,
+				D272F9FF2A79A2890087C392 /* Frameworks */,
+				D272FA002A79A2890087C392 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D272FA042A79A2890087C392 /* PBXTargetDependency */,
+			);
+			name = PaldoPortUITests;
+			productName = PaldoPortUITests;
+			productReference = D272FA022A79A2890087C392 /* PaldoPortUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D272F9D72A79A2890087C392 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					D272F9DE2A79A2890087C392 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					D272F9F72A79A2890087C392 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D272F9DE2A79A2890087C392;
+					};
+					D272FA012A79A2890087C392 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D272F9DE2A79A2890087C392;
+					};
+				};
+			};
+			buildConfigurationList = D272F9DA2A79A2890087C392 /* Build configuration list for PBXProject "PaldoPort" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D272F9D62A79A2890087C392;
+			productRefGroup = D272F9E02A79A2890087C392 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D272F9DE2A79A2890087C392 /* PaldoPort */,
+				D272F9F72A79A2890087C392 /* PaldoPortTests */,
+				D272FA012A79A2890087C392 /* PaldoPortUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D272F9DD2A79A2890087C392 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D272F9F22A79A2890087C392 /* LaunchScreen.storyboard in Resources */,
+				D272F9EF2A79A2890087C392 /* Assets.xcassets in Resources */,
+				D272FA222A79AA170087C392 /* MapView.storyboard in Resources */,
+				D272FA242A79AC190087C392 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D272F9F62A79A2890087C392 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D272FA002A79A2890087C392 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D272F9DB2A79A2890087C392 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D272F9E32A79A2890087C392 /* AppDelegate.swift in Sources */,
+				D272FA262A7A3CA90087C392 /* MapViewModel.swift in Sources */,
+				D272F9E52A79A2890087C392 /* SceneDelegate.swift in Sources */,
+				D272FA202A79A9D20087C392 /* MapViewController.swift in Sources */,
+				D272FA282A7A3E7F0087C392 /* Annotation.swift in Sources */,
+				D272F9ED2A79A2890087C392 /* PaldoPort.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D272F9F42A79A2890087C392 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D272F9FD2A79A2890087C392 /* PaldoPortTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D272F9FE2A79A2890087C392 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D272FA092A79A2890087C392 /* PaldoPortUITestsLaunchTests.swift in Sources */,
+				D272FA072A79A2890087C392 /* PaldoPortUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D272F9FA2A79A2890087C392 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D272F9DE2A79A2890087C392 /* PaldoPort */;
+			targetProxy = D272F9F92A79A2890087C392 /* PBXContainerItemProxy */;
+		};
+		D272FA042A79A2890087C392 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D272F9DE2A79A2890087C392 /* PaldoPort */;
+			targetProxy = D272FA032A79A2890087C392 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D272F9F02A79A2890087C392 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D272F9F12A79A2890087C392 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D272FA0A2A79A2890087C392 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D272FA0B2A79A2890087C392 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D272FA0D2A79A2890087C392 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PaldoPort/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PaldoBottle.PaldoPort;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D272FA0E2A79A2890087C392 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PaldoPort/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PaldoBottle.PaldoPort;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D272FA102A79A2890087C392 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PaldoBottle.PaldoPortTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaldoPort.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PaldoPort";
+			};
+			name = Debug;
+		};
+		D272FA112A79A2890087C392 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PaldoBottle.PaldoPortTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaldoPort.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PaldoPort";
+			};
+			name = Release;
+		};
+		D272FA132A79A2890087C392 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PaldoBottle.PaldoPortUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PaldoPort;
+			};
+			name = Debug;
+		};
+		D272FA142A79A2890087C392 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PaldoBottle.PaldoPortUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PaldoPort;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D272F9DA2A79A2890087C392 /* Build configuration list for PBXProject "PaldoPort" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D272FA0A2A79A2890087C392 /* Debug */,
+				D272FA0B2A79A2890087C392 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D272FA0C2A79A2890087C392 /* Build configuration list for PBXNativeTarget "PaldoPort" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D272FA0D2A79A2890087C392 /* Debug */,
+				D272FA0E2A79A2890087C392 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D272FA0F2A79A2890087C392 /* Build configuration list for PBXNativeTarget "PaldoPortTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D272FA102A79A2890087C392 /* Debug */,
+				D272FA112A79A2890087C392 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D272FA122A79A2890087C392 /* Build configuration list for PBXNativeTarget "PaldoPortUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D272FA132A79A2890087C392 /* Debug */,
+				D272FA142A79A2890087C392 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D272F9EB2A79A2890087C392 /* PaldoPort.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D272F9EC2A79A2890087C392 /* PaldoPort.xcdatamodel */,
+			);
+			currentVersion = D272F9EC2A79A2890087C392 /* PaldoPort.xcdatamodel */;
+			path = PaldoPort.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D272F9D72A79A2890087C392 /* Project object */;
+}

@@ -92,3 +92,5 @@ iOSInjectionProject/
 
 #환경변수 파일
 Config.xcconfig
+
+*.DS_Store

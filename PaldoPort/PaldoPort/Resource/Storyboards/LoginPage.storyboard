@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="LoginViewController" customModule="PaldoPort" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PALDO PORT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p20-0V-dqc">
+                                <rect key="frame" x="30" y="69" width="148.33333333333334" height="28.666666666666671"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="s0M-XL-rB2">
+                                <rect key="frame" x="76.666666666666686" y="443" width="240" height="222"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZH-XP-hl8">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="58"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="58" id="1zS-ys-866"/>
+                                            <constraint firstAttribute="width" constant="240" id="ZWc-gi-weJ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <backgroundConfiguration key="background" image="naver_login"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onTapNaverLogin:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HAw-NC-dVc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXp-7C-gnn">
+                                        <rect key="frame" x="0.0" y="82" width="240" height="58"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="58" id="Bnu-2q-vKK"/>
+                                            <constraint firstAttribute="width" constant="240" id="EYM-XA-Z5w"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <backgroundConfiguration key="background" image="appleid_button"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onTapAppleLogin:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="OxD-Ea-xUR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0Q-sT-Jtp">
+                                        <rect key="frame" x="0.0" y="164" width="240" height="58"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="58" id="W4a-wH-ek2"/>
+                                            <constraint firstAttribute="width" constant="240" id="rSi-hF-c9A"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <backgroundConfiguration key="background" image="kakao_login_large_narrow"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onTapKakaoLogin:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="pXR-d6-gJx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="s0M-XL-rB2" secondAttribute="bottom" constant="153" id="gCg-7e-SIc"/>
+                            <constraint firstItem="s0M-XL-rB2" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="saU-rm-Bfa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="55.725190839694655" y="-28.169014084507044"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="appleid_button" width="160" height="38.666667938232422"/>
+        <image name="kakao_login_large_narrow" width="122" height="30"/>
+        <image name="naver_login" width="250" height="66.666664123535156"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

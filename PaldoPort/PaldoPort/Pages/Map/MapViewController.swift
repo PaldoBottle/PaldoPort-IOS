@@ -28,6 +28,13 @@ class MapViewController: UIViewController {
         annotationInit()
     }
     
+    
+    @IBAction func onTapMenuButton(_ sender: Any) {
+        let menuModal = MenuModalViewController()
+        present(menuModal, animated: true, completion: nil)
+    }
+    
+    
     func getUserLocationInfo(){
         // user location 정보 받아오기
         locationManager = CLLocationManager()

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43D35D611579C803AC3741C3 /* Pods_PaldoPortTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC42505D36BE919ACFD86762 /* Pods_PaldoPortTests.framework */; };
+		A938E2B7739349981EC182B8 /* Pods_PaldoPort_PaldoPortUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 803B6EF8D1B3A54D3C184D15 /* Pods_PaldoPort_PaldoPortUITests.framework */; };
+		D2621B812A8123BE00B6722C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2621B802A8123BE00B6722C /* UIColor.swift */; };
+		D2621B842A81273400B6722C /* MenuModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2621B832A81273400B6722C /* MenuModalViewController.swift */; };
+		D2621B862A812E2400B6722C /* TableCellWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2621B852A812E2400B6722C /* TableCellWithIcon.swift */; };
+		D2621B882A83DDD400B6722C /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D2621B872A83DDD400B6722C /* Config.xcconfig */; };
+		D2621B8A2A83E2E100B6722C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D2621B892A83E2E100B6722C /* .gitignore */; };
 		D272F9E32A79A2890087C392 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272F9E22A79A2890087C392 /* AppDelegate.swift */; };
 		D272F9E52A79A2890087C392 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272F9E42A79A2890087C392 /* SceneDelegate.swift */; };
 		D272F9ED2A79A2890087C392 /* PaldoPort.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D272F9EB2A79A2890087C392 /* PaldoPort.xcdatamodeld */; };
@@ -17,9 +24,17 @@
 		D272FA092A79A2890087C392 /* PaldoPortUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272FA082A79A2890087C392 /* PaldoPortUITestsLaunchTests.swift */; };
 		D272FA202A79A9D20087C392 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272FA1F2A79A9D20087C392 /* MapViewController.swift */; };
 		D272FA222A79AA170087C392 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D272FA212A79AA170087C392 /* MapView.storyboard */; };
-		D272FA242A79AC190087C392 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D272FA232A79AC190087C392 /* Main.storyboard */; };
+		D272FA242A79AC190087C392 /* LoginPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D272FA232A79AC190087C392 /* LoginPage.storyboard */; };
 		D272FA262A7A3CA90087C392 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272FA252A7A3CA80087C392 /* MapViewModel.swift */; };
 		D272FA282A7A3E7F0087C392 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272FA272A7A3E7F0087C392 /* Annotation.swift */; };
+		D272FA322A7D4B250087C392 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D272FA312A7D4B250087C392 /* Main.storyboard */; };
+		D272FA372A8104C90087C392 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272FA362A8104C90087C392 /* LoginViewModel.swift */; };
+		D272FA392A810A960087C392 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272FA382A810A960087C392 /* LoginViewController.swift */; };
+		D2EBDD852A865CD30046A5A7 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EBDD842A865CD30046A5A7 /* BaseResponse.swift */; };
+		D2EBDD872A865E860046A5A7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EBDD862A865E860046A5A7 /* User.swift */; };
+		D2EBDD892A865EF40046A5A7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EBDD882A865EF40046A5A7 /* Router.swift */; };
+		D2EBDD8C2A8662560046A5A7 /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EBDD8B2A8662560046A5A7 /* LoginAPI.swift */; };
+		F4A98CBEA52E6F8EE6BE5BB2 /* Pods_PaldoPort.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170B1C6BF070B8F1724CCC08 /* Pods_PaldoPort.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +55,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11968B20456378C1E5D1950A /* Pods-PaldoPortTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaldoPortTests.debug.xcconfig"; path = "Target Support Files/Pods-PaldoPortTests/Pods-PaldoPortTests.debug.xcconfig"; sourceTree = "<group>"; };
+		170B1C6BF070B8F1724CCC08 /* Pods_PaldoPort.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaldoPort.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46801C8D59F5665D8069E23D /* Pods-PaldoPort.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaldoPort.release.xcconfig"; path = "Target Support Files/Pods-PaldoPort/Pods-PaldoPort.release.xcconfig"; sourceTree = "<group>"; };
+		4BD0D73C5F642BD77F3D320F /* Pods-PaldoPort-PaldoPortUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaldoPort-PaldoPortUITests.release.xcconfig"; path = "Target Support Files/Pods-PaldoPort-PaldoPortUITests/Pods-PaldoPort-PaldoPortUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4FE90BCE3099569FBEFC3BA3 /* Pods-PaldoPortTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaldoPortTests.release.xcconfig"; path = "Target Support Files/Pods-PaldoPortTests/Pods-PaldoPortTests.release.xcconfig"; sourceTree = "<group>"; };
+		803B6EF8D1B3A54D3C184D15 /* Pods_PaldoPort_PaldoPortUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaldoPort_PaldoPortUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A4D9B1E7F237DC34A70F1B7 /* Pods-PaldoPort.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaldoPort.debug.xcconfig"; path = "Target Support Files/Pods-PaldoPort/Pods-PaldoPort.debug.xcconfig"; sourceTree = "<group>"; };
+		A7388597E9BC1019FCE22C23 /* Pods-PaldoPort-PaldoPortUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaldoPort-PaldoPortUITests.debug.xcconfig"; path = "Target Support Files/Pods-PaldoPort-PaldoPortUITests/Pods-PaldoPort-PaldoPortUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BC42505D36BE919ACFD86762 /* Pods_PaldoPortTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaldoPortTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2621B802A8123BE00B6722C /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		D2621B832A81273400B6722C /* MenuModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModalViewController.swift; sourceTree = "<group>"; };
+		D2621B852A812E2400B6722C /* TableCellWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellWithIcon.swift; sourceTree = "<group>"; };
+		D2621B872A83DDD400B6722C /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		D2621B892A83E2E100B6722C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D272F9DF2A79A2890087C392 /* PaldoPort.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaldoPort.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D272F9E22A79A2890087C392 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D272F9E42A79A2890087C392 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,9 +83,16 @@
 		D272FA082A79A2890087C392 /* PaldoPortUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaldoPortUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D272FA1F2A79A9D20087C392 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D272FA212A79AA170087C392 /* MapView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
-		D272FA232A79AC190087C392 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D272FA232A79AC190087C392 /* LoginPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginPage.storyboard; sourceTree = "<group>"; };
 		D272FA252A7A3CA80087C392 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		D272FA272A7A3E7F0087C392 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
+		D272FA312A7D4B250087C392 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D272FA362A8104C90087C392 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D272FA382A810A960087C392 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D2EBDD842A865CD30046A5A7 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		D2EBDD862A865E860046A5A7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D2EBDD882A865EF40046A5A7 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		D2EBDD8B2A8662560046A5A7 /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4A98CBEA52E6F8EE6BE5BB2 /* Pods_PaldoPort.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43D35D611579C803AC3741C3 /* Pods_PaldoPortTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +116,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A938E2B7739349981EC182B8 /* Pods_PaldoPort_PaldoPortUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D2621B822A81271A00B6722C /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				D2621B832A81273400B6722C /* MenuModalViewController.swift */,
+				D2621B852A812E2400B6722C /* TableCellWithIcon.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
 		D272F9D62A79A2890087C392 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +139,8 @@
 				D272F9FB2A79A2890087C392 /* PaldoPortTests */,
 				D272FA052A79A2890087C392 /* PaldoPortUITests */,
 				D272F9E02A79A2890087C392 /* Products */,
+				EB5885F19250670D5E074790 /* Frameworks */,
+				E81D856773C671F011867B45 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +166,8 @@
 				D272FA172A79A3470087C392 /* App */,
 				D272FA162A79A2DA0087C392 /* Resource */,
 				D272F9EB2A79A2890087C392 /* PaldoPort.xcdatamodeld */,
+				D2621B872A83DDD400B6722C /* Config.xcconfig */,
+				D2621B892A83E2E100B6722C /* .gitignore */,
 			);
 			path = PaldoPort;
 			sourceTree = "<group>";
@@ -160,7 +212,8 @@
 			children = (
 				D272F9F02A79A2890087C392 /* LaunchScreen.storyboard */,
 				D272FA212A79AA170087C392 /* MapView.storyboard */,
-				D272FA232A79AC190087C392 /* Main.storyboard */,
+				D272FA232A79AC190087C392 /* LoginPage.storyboard */,
+				D272FA312A7D4B250087C392 /* Main.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -168,6 +221,7 @@
 		D272FA192A79A3890087C392 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				D2621B802A8123BE00B6722C /* UIColor.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -176,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				D272FA272A7A3E7F0087C392 /* Annotation.swift */,
+				D2EBDD862A865E860046A5A7 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,6 +238,9 @@
 		D272FA1B2A79A39A0087C392 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D2EBDD8A2A865FA10046A5A7 /* API */,
+				D2EBDD842A865CD30046A5A7 /* BaseResponse.swift */,
+				D2EBDD882A865EF40046A5A7 /* Router.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -190,6 +248,7 @@
 		D272FA1C2A79A46D0087C392 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				D2621B822A81271A00B6722C /* Modal */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -197,6 +256,7 @@
 		D272FA1D2A79A49E0087C392 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				D272FA352A8104990087C392 /* Login */,
 				D272FA1E2A79A56E0087C392 /* Map */,
 			);
 			path = Pages;
@@ -211,6 +271,46 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
+		D272FA352A8104990087C392 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D272FA362A8104C90087C392 /* LoginViewModel.swift */,
+				D272FA382A810A960087C392 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D2EBDD8A2A865FA10046A5A7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D2EBDD8B2A8662560046A5A7 /* LoginAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		E81D856773C671F011867B45 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A4D9B1E7F237DC34A70F1B7 /* Pods-PaldoPort.debug.xcconfig */,
+				46801C8D59F5665D8069E23D /* Pods-PaldoPort.release.xcconfig */,
+				A7388597E9BC1019FCE22C23 /* Pods-PaldoPort-PaldoPortUITests.debug.xcconfig */,
+				4BD0D73C5F642BD77F3D320F /* Pods-PaldoPort-PaldoPortUITests.release.xcconfig */,
+				11968B20456378C1E5D1950A /* Pods-PaldoPortTests.debug.xcconfig */,
+				4FE90BCE3099569FBEFC3BA3 /* Pods-PaldoPortTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EB5885F19250670D5E074790 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				170B1C6BF070B8F1724CCC08 /* Pods_PaldoPort.framework */,
+				803B6EF8D1B3A54D3C184D15 /* Pods_PaldoPort_PaldoPortUITests.framework */,
+				BC42505D36BE919ACFD86762 /* Pods_PaldoPortTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,9 +318,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D272FA0C2A79A2890087C392 /* Build configuration list for PBXNativeTarget "PaldoPort" */;
 			buildPhases = (
+				46654FBE8A50DDC7C09CFFA6 /* [CP] Check Pods Manifest.lock */,
 				D272F9DB2A79A2890087C392 /* Sources */,
 				D272F9DC2A79A2890087C392 /* Frameworks */,
 				D272F9DD2A79A2890087C392 /* Resources */,
+				577EB547EA391CDB2F0B99EA /* [CP] Embed Pods Frameworks */,
+				BAF8D1F689B9E69151D51FDF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,6 +338,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D272FA0F2A79A2890087C392 /* Build configuration list for PBXNativeTarget "PaldoPortTests" */;
 			buildPhases = (
+				D06418BF65A387201628E6F5 /* [CP] Check Pods Manifest.lock */,
 				D272F9F42A79A2890087C392 /* Sources */,
 				D272F9F52A79A2890087C392 /* Frameworks */,
 				D272F9F62A79A2890087C392 /* Resources */,
@@ -253,9 +357,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D272FA122A79A2890087C392 /* Build configuration list for PBXNativeTarget "PaldoPortUITests" */;
 			buildPhases = (
+				23225AE1C448B04BC8AB2DD2 /* [CP] Check Pods Manifest.lock */,
 				D272F9FE2A79A2890087C392 /* Sources */,
 				D272F9FF2A79A2890087C392 /* Frameworks */,
 				D272FA002A79A2890087C392 /* Resources */,
+				3FDD4400502755DE51173422 /* [CP] Embed Pods Frameworks */,
+				DB5B6B059D2FB3E4ED781B2D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -316,9 +423,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D272F9F22A79A2890087C392 /* LaunchScreen.storyboard in Resources */,
+				D2621B8A2A83E2E100B6722C /* .gitignore in Resources */,
+				D272FA322A7D4B250087C392 /* Main.storyboard in Resources */,
 				D272F9EF2A79A2890087C392 /* Assets.xcassets in Resources */,
 				D272FA222A79AA170087C392 /* MapView.storyboard in Resources */,
-				D272FA242A79AC190087C392 /* Main.storyboard in Resources */,
+				D2621B882A83DDD400B6722C /* Config.xcconfig in Resources */,
+				D272FA242A79AC190087C392 /* LoginPage.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +448,143 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		23225AE1C448B04BC8AB2DD2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PaldoPort-PaldoPortUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FDD4400502755DE51173422 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PaldoPort-PaldoPortUITests/Pods-PaldoPort-PaldoPortUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PaldoPort-PaldoPortUITests/Pods-PaldoPort-PaldoPortUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PaldoPort-PaldoPortUITests/Pods-PaldoPort-PaldoPortUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46654FBE8A50DDC7C09CFFA6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PaldoPort-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		577EB547EA391CDB2F0B99EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PaldoPort/Pods-PaldoPort-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PaldoPort/Pods-PaldoPort-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PaldoPort/Pods-PaldoPort-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAF8D1F689B9E69151D51FDF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PaldoPort/Pods-PaldoPort-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PaldoPort/Pods-PaldoPort-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PaldoPort/Pods-PaldoPort-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D06418BF65A387201628E6F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PaldoPortTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB5B6B059D2FB3E4ED781B2D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PaldoPort-PaldoPortUITests/Pods-PaldoPort-PaldoPortUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PaldoPort-PaldoPortUITests/Pods-PaldoPort-PaldoPortUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PaldoPort-PaldoPortUITests/Pods-PaldoPort-PaldoPortUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D272F9DB2A79A2890087C392 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -346,9 +593,18 @@
 				D272F9E32A79A2890087C392 /* AppDelegate.swift in Sources */,
 				D272FA262A7A3CA90087C392 /* MapViewModel.swift in Sources */,
 				D272F9E52A79A2890087C392 /* SceneDelegate.swift in Sources */,
+				D272FA372A8104C90087C392 /* LoginViewModel.swift in Sources */,
+				D2621B862A812E2400B6722C /* TableCellWithIcon.swift in Sources */,
+				D2621B812A8123BE00B6722C /* UIColor.swift in Sources */,
+				D2EBDD872A865E860046A5A7 /* User.swift in Sources */,
+				D2EBDD892A865EF40046A5A7 /* Router.swift in Sources */,
+				D272FA392A810A960087C392 /* LoginViewController.swift in Sources */,
 				D272FA202A79A9D20087C392 /* MapViewController.swift in Sources */,
 				D272FA282A7A3E7F0087C392 /* Annotation.swift in Sources */,
 				D272F9ED2A79A2890087C392 /* PaldoPort.xcdatamodeld in Sources */,
+				D2EBDD8C2A8662560046A5A7 /* LoginAPI.swift in Sources */,
+				D2621B842A81273400B6722C /* MenuModalViewController.swift in Sources */,
+				D2EBDD852A865CD30046A5A7 /* BaseResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +768,7 @@
 		};
 		D272FA0D2A79A2890087C392 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A4D9B1E7F237DC34A70F1B7 /* Pods-PaldoPort.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -519,6 +776,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PaldoPort/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "사용자의 위치정보를 받아오려고 합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "사용자의 위치정보를 받아오려고 합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -539,6 +798,7 @@
 		};
 		D272FA0E2A79A2890087C392 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46801C8D59F5665D8069E23D /* Pods-PaldoPort.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -546,6 +806,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PaldoPort/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "사용자의 위치정보를 받아오려고 합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "사용자의 위치정보를 받아오려고 합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -566,6 +828,7 @@
 		};
 		D272FA102A79A2890087C392 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11968B20456378C1E5D1950A /* Pods-PaldoPortTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -585,6 +848,7 @@
 		};
 		D272FA112A79A2890087C392 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2621B872A83DDD400B6722C /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -604,6 +868,7 @@
 		};
 		D272FA132A79A2890087C392 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7388597E9BC1019FCE22C23 /* Pods-PaldoPort-PaldoPortUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -621,6 +886,7 @@
 		};
 		D272FA142A79A2890087C392 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2621B872A83DDD400B6722C /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

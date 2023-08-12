@@ -11,7 +11,7 @@ class LoginViewModel{
         
     }
     
-    func loginWithApple(){
+    func loginWithGoogle(){
         
     }
     

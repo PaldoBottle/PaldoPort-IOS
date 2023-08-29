@@ -7,10 +7,6 @@ class LoginViewModel{
 
     }
     
-    func loginWithNaver(){
-        
-    }
-    
     func loginWithGoogle(){
         
     }

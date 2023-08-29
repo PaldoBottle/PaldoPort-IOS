@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var pardoPortLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
@@ -19,6 +19,8 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mapView.delegate = self
         
         view.sendSubviewToBack(mapView)
         view.bringSubviewToFront(pardoPortLabel)
@@ -72,6 +74,26 @@ class MapViewController: UIViewController {
             pin.title = annotation.locationName
             mapView.addAnnotation(pin)
         }
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard !(annotation is MKUserLocation) else {
+            return nil
+        }
+        
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "custom")
+        
+        if annotationView == nil {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "custom")
+            annotationView?.canShowCallout = true
+        }
+        else {
+            annotationView?.annotation = annotation
+        }
+        
+//        annotationView?.bounds = CGRectMake(0, 0, 100, 100)
+        
+        return annotationView
     }
 
 }

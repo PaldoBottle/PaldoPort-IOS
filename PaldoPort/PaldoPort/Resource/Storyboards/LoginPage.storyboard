@@ -24,38 +24,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="s0M-XL-rB2">
-                                <rect key="frame" x="76.666666666666686" y="443" width="240" height="222"/>
+                                <rect key="frame" x="76.666666666666686" y="525" width="240" height="140"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZH-XP-hl8">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="58"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="58" id="1zS-ys-866"/>
-                                            <constraint firstAttribute="width" constant="240" id="ZWc-gi-weJ"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain">
-                                            <backgroundConfiguration key="background" image="naver_login"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="onTapNaverLogin:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HAw-NC-dVc"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXp-7C-gnn">
-                                        <rect key="frame" x="0.0" y="82" width="240" height="58"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="58" id="Bnu-2q-vKK"/>
-                                            <constraint firstAttribute="width" constant="240" id="EYM-XA-Z5w"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain">
-                                            <backgroundConfiguration key="background" image="appleid_button"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="onTapAppleLogin:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="OxD-Ea-xUR"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0Q-sT-Jtp">
-                                        <rect key="frame" x="0.0" y="164" width="240" height="58"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="58"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="58" id="W4a-wH-ek2"/>
                                             <constraint firstAttribute="width" constant="240" id="rSi-hF-c9A"/>
@@ -68,6 +40,16 @@
                                             <action selector="onTapKakaoLogin:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="pXR-d6-gJx"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kg9-0F-zju" customClass="GIDSignInButton">
+                                        <rect key="frame" x="0.0" y="82" width="240" height="58"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="58" id="jmf-ba-QHq"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="onTapGoogleLogin:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XCz-ab-EKG"/>
+                                        </connections>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -78,6 +60,9 @@
                             <constraint firstItem="s0M-XL-rB2" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="saU-rm-Bfa"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="googleSignInButton" destination="kg9-0F-zju" id="OwW-5I-cag"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,9 +70,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="appleid_button" width="160" height="38.666667938232422"/>
         <image name="kakao_login_large_narrow" width="122" height="30"/>
-        <image name="naver_login" width="250" height="66.666664123535156"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

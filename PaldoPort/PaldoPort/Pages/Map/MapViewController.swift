@@ -28,12 +28,21 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         getUserLocationInfo()
         mapInit()
         annotationInit()
+        registerAnnotationView()
     }
     
     
     @IBAction func onTapMenuButton(_ sender: Any) {
         let menuModal = MenuModalViewController()
         present(menuModal, animated: true, completion: nil)
+    }
+    
+    func onTapAnnotation(supDistrict : String, district : String){
+        if let issueStampViewController = self.storyboard?.instantiateViewController(withIdentifier: "IssueStampViewController") as? IssueStampViewController{
+            issueStampViewController.district = district
+            issueStampViewController.supDistrict = supDistrict
+            present(issueStampViewController, animated: true, completion: nil)
+        }
     }
     
     
@@ -69,9 +78,11 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         for annotation in viewModel.annotations {
             let pin = MKPointAnnotation()
-        
+            
             pin.coordinate = CLLocationCoordinate2D(latitude: annotation.latitude, longitude: annotation.longitude)
-            pin.title = annotation.locationName
+            pin.title = annotation.district
+            pin.subtitle = annotation.supDistrict
+            
             mapView.addAnnotation(pin)
         }
     }
@@ -80,20 +91,28 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         guard !(annotation is MKUserLocation) else {
             return nil
         }
-        
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "custom")
-        
-        if annotationView == nil {
-            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "custom")
-            annotationView?.canShowCallout = true
-        }
-        else {
-            annotationView?.annotation = annotation
-        }
-        
-//        annotationView?.bounds = CGRectMake(0, 0, 100, 100)
+
+        let identifier = "custom"
+        var annotationView : MKMarkerAnnotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+
+        annotationView.markerTintColor = UIColor.mainColor
+        annotationView.glyphImage = UIImage(systemName : "train.side.front.car")
         
         return annotationView
+
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        let annotation = view.annotation
+        let supDistrict : String = annotation?.subtitle! ?? ""
+        let district : String = annotation?.title! ?? ""
+        
+        onTapAnnotation(supDistrict: supDistrict, district: district)
+    }
+    
+    private func registerAnnotationView(){
+        mapView.register(ClusterAnnotationView.self
+                         , forAnnotationViewWithReuseIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier)
     }
 
 }

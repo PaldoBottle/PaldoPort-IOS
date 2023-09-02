@@ -30,9 +30,14 @@
 		D272FA322A7D4B250087C392 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D272FA312A7D4B250087C392 /* Main.storyboard */; };
 		D272FA372A8104C90087C392 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272FA362A8104C90087C392 /* LoginViewModel.swift */; };
 		D272FA392A810A960087C392 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272FA382A810A960087C392 /* LoginViewController.swift */; };
+		D2B7AF222A9E46620065CFC0 /* ClusterAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF212A9E46620065CFC0 /* ClusterAnnotationView.swift */; };
+		D2B7AF252A9EDAAC0065CFC0 /* IssueStampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF242A9EDAAC0065CFC0 /* IssueStampViewController.swift */; };
+		D2B7AF272A9EDEAF0065CFC0 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF262A9EDEAF0065CFC0 /* KeyChain.swift */; };
+		D2B7AF292A9EDF340065CFC0 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF282A9EDF340065CFC0 /* LoadingIndicator.swift */; };
+		D2B7AF2D2AA350B30065CFC0 /* StampAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF2C2AA350B30065CFC0 /* StampAPI.swift */; };
+		D2B7AF312AA375E60065CFC0 /* RegionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF302AA375E60065CFC0 /* RegionAPI.swift */; };
 		D2D302932A9B5AED00622DFF /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D302922A9B5AED00622DFF /* APIConstants.swift */; };
-		D2D302962A9CE66F00622DFF /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D302952A9CE66F00622DFF /* AnnotationView.swift */; };
-		D2D302982A9CE77400622DFF /* ClusterAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D302972A9CE77400622DFF /* ClusterAnnotationView.swift */; };
+		D2D3029A2A9DDCE500622DFF /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D302992A9DDCE500622DFF /* CustomAnnotation.swift */; };
 		D2EBDD852A865CD30046A5A7 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EBDD842A865CD30046A5A7 /* BaseResponse.swift */; };
 		D2EBDD872A865E860046A5A7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EBDD862A865E860046A5A7 /* User.swift */; };
 		D2EBDD892A865EF40046A5A7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EBDD882A865EF40046A5A7 /* Router.swift */; };
@@ -92,9 +97,14 @@
 		D272FA312A7D4B250087C392 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D272FA362A8104C90087C392 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D272FA382A810A960087C392 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D2B7AF212A9E46620065CFC0 /* ClusterAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterAnnotationView.swift; sourceTree = "<group>"; };
+		D2B7AF242A9EDAAC0065CFC0 /* IssueStampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueStampViewController.swift; sourceTree = "<group>"; };
+		D2B7AF262A9EDEAF0065CFC0 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
+		D2B7AF282A9EDF340065CFC0 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
+		D2B7AF2C2AA350B30065CFC0 /* StampAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampAPI.swift; sourceTree = "<group>"; };
+		D2B7AF302AA375E60065CFC0 /* RegionAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionAPI.swift; sourceTree = "<group>"; };
 		D2D302922A9B5AED00622DFF /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
-		D2D302952A9CE66F00622DFF /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
-		D2D302972A9CE77400622DFF /* ClusterAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterAnnotationView.swift; sourceTree = "<group>"; };
+		D2D302992A9DDCE500622DFF /* CustomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		D2EBDD842A865CD30046A5A7 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		D2EBDD862A865E860046A5A7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D2EBDD882A865EF40046A5A7 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -141,6 +151,7 @@
 		D272F9D62A79A2890087C392 = {
 			isa = PBXGroup;
 			children = (
+				D2621B892A83E2E100B6722C /* .gitignore */,
 				D272F9E12A79A2890087C392 /* PaldoPort */,
 				D272F9FB2A79A2890087C392 /* PaldoPortTests */,
 				D272FA052A79A2890087C392 /* PaldoPortUITests */,
@@ -172,7 +183,7 @@
 				D272FA172A79A3470087C392 /* App */,
 				D272FA162A79A2DA0087C392 /* Resource */,
 				D272F9EB2A79A2890087C392 /* PaldoPort.xcdatamodeld */,
-				D2621B892A83E2E100B6722C /* .gitignore */,
+				D2B7AF262A9EDEAF0065CFC0 /* KeyChain.swift */,
 			);
 			path = PaldoPort;
 			sourceTree = "<group>";
@@ -256,6 +267,7 @@
 			children = (
 				D2D302942A9CE66100622DFF /* Annotation */,
 				D2621B822A81271A00B6722C /* Modal */,
+				D2B7AF282A9EDF340065CFC0 /* LoadingIndicator.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -274,6 +286,7 @@
 			children = (
 				D272FA1F2A79A9D20087C392 /* MapViewController.swift */,
 				D272FA252A7A3CA80087C392 /* MapViewModel.swift */,
+				D2B7AF242A9EDAAC0065CFC0 /* IssueStampViewController.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -299,8 +312,8 @@
 		D2D302942A9CE66100622DFF /* Annotation */ = {
 			isa = PBXGroup;
 			children = (
-				D2D302952A9CE66F00622DFF /* AnnotationView.swift */,
-				D2D302972A9CE77400622DFF /* ClusterAnnotationView.swift */,
+				D2D302992A9DDCE500622DFF /* CustomAnnotation.swift */,
+				D2B7AF212A9E46620065CFC0 /* ClusterAnnotationView.swift */,
 			);
 			path = Annotation;
 			sourceTree = "<group>";
@@ -309,6 +322,8 @@
 			isa = PBXGroup;
 			children = (
 				D2EBDD8B2A8662560046A5A7 /* LoginAPI.swift */,
+				D2B7AF2C2AA350B30065CFC0 /* StampAPI.swift */,
+				D2B7AF302AA375E60065CFC0 /* RegionAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -616,21 +631,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				D272F9E32A79A2890087C392 /* AppDelegate.swift in Sources */,
+				D2D3029A2A9DDCE500622DFF /* CustomAnnotation.swift in Sources */,
 				D272FA262A7A3CA90087C392 /* MapViewModel.swift in Sources */,
+				D2B7AF292A9EDF340065CFC0 /* LoadingIndicator.swift in Sources */,
 				D272F9E52A79A2890087C392 /* SceneDelegate.swift in Sources */,
+				D2B7AF222A9E46620065CFC0 /* ClusterAnnotationView.swift in Sources */,
 				D272FA372A8104C90087C392 /* LoginViewModel.swift in Sources */,
-				D2D302982A9CE77400622DFF /* ClusterAnnotationView.swift in Sources */,
 				D2D302932A9B5AED00622DFF /* APIConstants.swift in Sources */,
 				D2621B862A812E2400B6722C /* TableCellWithIcon.swift in Sources */,
+				D2B7AF312AA375E60065CFC0 /* RegionAPI.swift in Sources */,
 				D2621B812A8123BE00B6722C /* UIColor.swift in Sources */,
 				D2EBDD872A865E860046A5A7 /* User.swift in Sources */,
-				D2D302962A9CE66F00622DFF /* AnnotationView.swift in Sources */,
+				D2B7AF252A9EDAAC0065CFC0 /* IssueStampViewController.swift in Sources */,
+				D2B7AF2D2AA350B30065CFC0 /* StampAPI.swift in Sources */,
 				D2EBDD892A865EF40046A5A7 /* Router.swift in Sources */,
 				D272FA392A810A960087C392 /* LoginViewController.swift in Sources */,
 				D272FA202A79A9D20087C392 /* MapViewController.swift in Sources */,
 				D272FA282A7A3E7F0087C392 /* Annotation.swift in Sources */,
 				D272F9ED2A79A2890087C392 /* PaldoPort.xcdatamodeld in Sources */,
 				D2EBDD8C2A8662560046A5A7 /* LoginAPI.swift in Sources */,
+				D2B7AF272A9EDEAF0065CFC0 /* KeyChain.swift in Sources */,
 				D2621B842A81273400B6722C /* MenuModalViewController.swift in Sources */,
 				D2EBDD852A865CD30046A5A7 /* BaseResponse.swift in Sources */,
 			);

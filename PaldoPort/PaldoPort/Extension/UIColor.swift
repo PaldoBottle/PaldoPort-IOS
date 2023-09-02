@@ -4,6 +4,10 @@ import UIKit
 
 extension UIColor {
     
+    static var mainColor : UIColor{
+        return UIColor(hexCode: "0084C9")
+    }
+    
     convenience init(hexCode: String, alpha: CGFloat = 1.0) {
         var hexFormatted: String = hexCode.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
         

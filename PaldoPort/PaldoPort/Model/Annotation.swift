@@ -16,6 +16,8 @@ struct Annotation : Decodable{
     // 경도
     var longitude : Double
     
-    var locationName : String
+    var supDistrict : String
+    
+    var district : String
     
 }

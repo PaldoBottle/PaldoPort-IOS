@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
                    guard let user = user else { return }
 
                    let idToken = user.idToken
-                    LoginAPI.loginWithGoogle(token: idToken!.tokenString).subscribe(onNext: {
+                   LoginAPI.shared.loginWithGoogle(token: idToken!.tokenString).subscribe(onNext: {
                             (user) in
                         self.goToMapView()
                         },onError: {
@@ -54,14 +54,13 @@ class LoginViewController: UIViewController {
         
     
     @IBAction func onTapKakaoLogin(_ sender: Any) {
-        viewModel.loginWithKaKao()
-        
+
         // 카카오톡으로 로그인일때
         if (UserApi.isKakaoTalkLoginAvailable()) {
             UserApi.shared.rx.loginWithKakaoTalk()
                 .subscribe(onNext:{ (oauthToken) in
                     print("loginWithKakaoTalk success.")
-                    LoginAPI.loginWithKaKao(token: oauthToken.accessToken).subscribe(onNext: {
+                    LoginAPI.shared.loginWithKaKao(token: oauthToken.accessToken).subscribe(onNext: {
                             (user) in
                         self.goToMapView()
                         },onError: {

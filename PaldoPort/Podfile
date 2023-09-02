@@ -7,6 +7,11 @@ target 'PaldoPort' do
 
   # Pods for PaldoPort
   pod 'RxKakaoSDK'
+  pod 'RxSwift', '6.5.0'
+  pod 'RxCocoa', '6.5.0'
+  pod 'Alamofire'
+  pod 'GoogleSignIn'
+
 
   target 'PaldoPortTests' do
     inherit! :search_paths

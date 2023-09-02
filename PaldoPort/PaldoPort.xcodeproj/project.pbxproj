@@ -36,6 +36,10 @@
 		D2B7AF292A9EDF340065CFC0 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF282A9EDF340065CFC0 /* LoadingIndicator.swift */; };
 		D2B7AF2D2AA350B30065CFC0 /* StampAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF2C2AA350B30065CFC0 /* StampAPI.swift */; };
 		D2B7AF312AA375E60065CFC0 /* RegionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF302AA375E60065CFC0 /* RegionAPI.swift */; };
+		D2B7AF332AA38BC60065CFC0 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF322AA38BC60065CFC0 /* Region.swift */; };
+		D2B7AF352AA398E10065CFC0 /* Stamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF342AA398E00065CFC0 /* Stamp.swift */; };
+		D2B7AF372AA39CFA0065CFC0 /* ChallengeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF362AA39CFA0065CFC0 /* ChallengeAPI.swift */; };
+		D2B7AF392AA39D890065CFC0 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF382AA39D890065CFC0 /* Challenge.swift */; };
 		D2D302932A9B5AED00622DFF /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D302922A9B5AED00622DFF /* APIConstants.swift */; };
 		D2D3029A2A9DDCE500622DFF /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D302992A9DDCE500622DFF /* CustomAnnotation.swift */; };
 		D2EBDD852A865CD30046A5A7 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EBDD842A865CD30046A5A7 /* BaseResponse.swift */; };
@@ -103,6 +107,10 @@
 		D2B7AF282A9EDF340065CFC0 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		D2B7AF2C2AA350B30065CFC0 /* StampAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampAPI.swift; sourceTree = "<group>"; };
 		D2B7AF302AA375E60065CFC0 /* RegionAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionAPI.swift; sourceTree = "<group>"; };
+		D2B7AF322AA38BC60065CFC0 /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
+		D2B7AF342AA398E00065CFC0 /* Stamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stamp.swift; sourceTree = "<group>"; };
+		D2B7AF362AA39CFA0065CFC0 /* ChallengeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeAPI.swift; sourceTree = "<group>"; };
+		D2B7AF382AA39D890065CFC0 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		D2D302922A9B5AED00622DFF /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		D2D302992A9DDCE500622DFF /* CustomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		D2EBDD842A865CD30046A5A7 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
@@ -248,6 +256,9 @@
 			children = (
 				D272FA272A7A3E7F0087C392 /* Annotation.swift */,
 				D2EBDD862A865E860046A5A7 /* User.swift */,
+				D2B7AF322AA38BC60065CFC0 /* Region.swift */,
+				D2B7AF342AA398E00065CFC0 /* Stamp.swift */,
+				D2B7AF382AA39D890065CFC0 /* Challenge.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -324,6 +335,7 @@
 				D2EBDD8B2A8662560046A5A7 /* LoginAPI.swift */,
 				D2B7AF2C2AA350B30065CFC0 /* StampAPI.swift */,
 				D2B7AF302AA375E60065CFC0 /* RegionAPI.swift */,
+				D2B7AF362AA39CFA0065CFC0 /* ChallengeAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -631,8 +643,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D272F9E32A79A2890087C392 /* AppDelegate.swift in Sources */,
+				D2B7AF392AA39D890065CFC0 /* Challenge.swift in Sources */,
 				D2D3029A2A9DDCE500622DFF /* CustomAnnotation.swift in Sources */,
 				D272FA262A7A3CA90087C392 /* MapViewModel.swift in Sources */,
+				D2B7AF332AA38BC60065CFC0 /* Region.swift in Sources */,
 				D2B7AF292A9EDF340065CFC0 /* LoadingIndicator.swift in Sources */,
 				D272F9E52A79A2890087C392 /* SceneDelegate.swift in Sources */,
 				D2B7AF222A9E46620065CFC0 /* ClusterAnnotationView.swift in Sources */,
@@ -643,7 +657,9 @@
 				D2621B812A8123BE00B6722C /* UIColor.swift in Sources */,
 				D2EBDD872A865E860046A5A7 /* User.swift in Sources */,
 				D2B7AF252A9EDAAC0065CFC0 /* IssueStampViewController.swift in Sources */,
+				D2B7AF352AA398E10065CFC0 /* Stamp.swift in Sources */,
 				D2B7AF2D2AA350B30065CFC0 /* StampAPI.swift in Sources */,
+				D2B7AF372AA39CFA0065CFC0 /* ChallengeAPI.swift in Sources */,
 				D2EBDD892A865EF40046A5A7 /* Router.swift in Sources */,
 				D272FA392A810A960087C392 /* LoginViewController.swift in Sources */,
 				D272FA202A79A9D20087C392 /* MapViewController.swift in Sources */,

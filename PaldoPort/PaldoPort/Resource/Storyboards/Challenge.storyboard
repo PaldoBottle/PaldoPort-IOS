@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Challenge View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ChallengeViewController" id="Y6W-OH-hqX" customClass="ChallengeViewController" customModule="PaldoPort" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="챌린지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emr-eB-tHf">
+                                <rect key="frame" x="30" y="69" width="63" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pWZ-iF-6xo">
+                                <rect key="frame" x="0.0" y="128" width="393" height="690"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KuW-A4-hvw">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChallengeCollectionViewCell" id="xfy-6q-Dw2" customClass="ChallengeCollectionViewCell" customModule="PaldoPort" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Fqg-v0-o3x">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="첫번째 달성" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLG-H2-RyA">
+                                                    <rect key="frame" x="22.666666666666671" y="24" width="83" height="22"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="설명 주저리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tT3-42-26m">
+                                                    <rect key="frame" x="32" y="54" width="65" height="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="포인트 : 30p" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caw-kt-6g0">
+                                                    <rect key="frame" x="31" y="87" width="64" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eLG-H2-RyA" firstAttribute="centerX" secondItem="Fqg-v0-o3x" secondAttribute="centerX" id="1jc-86-CGV"/>
+                                                <constraint firstItem="eLG-H2-RyA" firstAttribute="top" secondItem="Fqg-v0-o3x" secondAttribute="top" constant="24" id="TG9-TZ-Xro"/>
+                                                <constraint firstItem="tT3-42-26m" firstAttribute="centerX" secondItem="Fqg-v0-o3x" secondAttribute="centerX" id="Xd7-l9-Oyx"/>
+                                                <constraint firstItem="tT3-42-26m" firstAttribute="top" secondItem="eLG-H2-RyA" secondAttribute="bottom" constant="6" id="iV1-Yt-DtD"/>
+                                                <constraint firstItem="caw-kt-6g0" firstAttribute="top" secondItem="tT3-42-26m" secondAttribute="bottom" constant="18" id="rVc-xb-2tp"/>
+                                                <constraint firstItem="caw-kt-6g0" firstAttribute="centerX" secondItem="Fqg-v0-o3x" secondAttribute="centerX" id="u1c-fv-elc"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="desc" destination="tT3-42-26m" id="FQa-w2-I1T"/>
+                                            <outlet property="name" destination="eLG-H2-RyA" id="8g3-0U-acC"/>
+                                            <outlet property="point" destination="caw-kt-6g0" id="bgy-zZ-p4d"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="emr-eB-tHf" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="4fA-71-Am7"/>
+                            <constraint firstItem="emr-eB-tHf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="Cut-aT-kkd"/>
+                            <constraint firstItem="pWZ-iF-6xo" firstAttribute="top" secondItem="emr-eB-tHf" secondAttribute="bottom" constant="30" id="V4I-Oj-N6i"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pWZ-iF-6xo" secondAttribute="trailing" id="jAW-2D-8JG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="pWZ-iF-6xo" secondAttribute="bottom" id="n9Y-Ow-KV5"/>
+                            <constraint firstItem="pWZ-iF-6xo" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="s5u-Ru-cLG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="pWZ-iF-6xo" id="awX-sB-7Hp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="14.503816793893129" y="-25.35211267605634"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

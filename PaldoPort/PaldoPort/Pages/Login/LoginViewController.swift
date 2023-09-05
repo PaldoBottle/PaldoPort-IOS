@@ -8,9 +8,7 @@ import GoogleSignIn
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var googleSignInButton: GIDSignInButton!
-    
-    let viewModel = LoginViewModel()
-    let disposeBag = DisposeBag()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +18,6 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onTapGoogleLogin(_ sender: Any) {
-        viewModel.loginWithGoogle()
         
         GIDSignIn.sharedInstance.signIn(withPresenting: self) { signInResult, error in
             guard error == nil else {
@@ -37,15 +34,28 @@ class LoginViewController: UIViewController {
                    guard let user = user else { return }
 
                    let idToken = user.idToken
-                   LoginAPI.shared.loginWithGoogle(token: idToken!.tokenString).subscribe(onNext: {
-                            (user) in
-                        self.goToMapView()
-                        },onError: {
-                            (error) in
-                            self.showAlert()
-                            print(error)
-                        }
-                    ).disposed(by: self.disposeBag)
+                LoginAPI.shared.loginWithGoogle(token: idToken!.tokenString){
+                    (networkResult) in
+                                    switch networkResult{
+                                    case .success(let data):
+                                        let user : User = data as! User
+                                        self.goToMapView()
+
+                                    case .requestErr(let msg):
+                                        if let message = msg as? String {
+                                            print(message)
+                                        }
+                                    case .pathErr:
+                                        self.showAlert()
+                                        print("pathErr in loginWithAPI")
+                                    case .serverErr:
+                                        self.showAlert()
+                                        print("serverErr in loginWithAPI")
+                                    case .networkFail:
+                                        self.showAlert()
+                                        print("networkFail in loginWithAPI")
+                                    }
+                }
             }
         }
         
@@ -57,24 +67,45 @@ class LoginViewController: UIViewController {
 
         // 카카오톡으로 로그인일때
         if (UserApi.isKakaoTalkLoginAvailable()) {
-            UserApi.shared.rx.loginWithKakaoTalk()
-                .subscribe(onNext:{ (oauthToken) in
-                    print("loginWithKakaoTalk success.")
-                    LoginAPI.shared.loginWithKaKao(token: oauthToken.accessToken).subscribe(onNext: {
-                            (user) in
-                        self.goToMapView()
-                        },onError: {
-                            (error) in
+                    UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
+                        if let error = error {
                             print(error)
                         }
-                    ).disposed(by: self.disposeBag)
-                    
-                }, onError: {error in
-                    print(error)
-                    self.showAlert()
-                })
-            .disposed(by: disposeBag)
-        }else{
+                        else {
+                            print("loginWithKakaoTalk() success.")
+                          
+                            LoginAPI.shared.loginWithKaKao(token: oauthToken!.accessToken){
+                                (networkResult) in
+                                switch networkResult{
+                                case .success(let data):
+//                                    let tokens : [Token] = data as! [Token]
+//
+//                                    for token : Token in tokens {
+//                                        KeyChain().create(key: token.types, token: token.token)
+//                                    }
+                                    
+                                    self.goToMapView()
+
+                                    
+                                case .requestErr(let msg):
+                                    if let message = msg as? String {
+                                        print(message)
+                                        self.showAlert()
+                                    }
+                                case .pathErr:
+                                    print("pathErr in loginWithSocialAPI")
+                                    self.showAlert()
+                                case .serverErr:
+                                    self.showAlert()
+                                    print("serverErr in loginWithSocialAPI")
+                                case .networkFail:
+                                    self.showAlert()
+                                    print("networkFail in loginWithSocialAPI")
+                                }
+                            }
+                        }
+                    }
+                }else{
             showAlert()
         }
         

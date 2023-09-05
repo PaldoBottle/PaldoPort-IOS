@@ -16,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PALDO PORT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p20-0V-dqc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PALDO PORT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p20-0V-dqc">
                                 <rect key="frame" x="30" y="69" width="148.33333333333334" height="28.666666666666671"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -56,8 +55,10 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="p20-0V-dqc" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="4Uf-a0-Rws"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="s0M-XL-rB2" secondAttribute="bottom" constant="153" id="gCg-7e-SIc"/>
                             <constraint firstItem="s0M-XL-rB2" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="saU-rm-Bfa"/>
+                            <constraint firstItem="p20-0V-dqc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="z4I-fs-MTs"/>
                         </constraints>
                     </view>
                     <connections>

@@ -12,8 +12,7 @@ import Alamofire
 struct LoginAPI {
     static let shared = LoginAPI()
     
-    func loginWithKaKao(token : String)->Observable<User>{
-        return Observable.create{ observer -> Disposable in
+    func loginWithKaKao(token : String , completion: @escaping (NetworkResult<Any>)->Void){
             
             let url = APIConstants.loginWithKakao
             let headers : HTTPHeaders = ["Content-Type" : "application/json"]
@@ -40,23 +39,18 @@ struct LoginAPI {
                                 let decoder = JSONDecoder()
                                 guard let decodedData = try? decoder.decode(User.self, from: data) else {
                                     return}
-                                observer.onNext(decodedData)
-                                observer.onCompleted()
+                                completion(.success(decodedData))
                             default:
                                 print("예외처리")
                             }
                         case .failure(let error):
                             print(error)
-                            observer.onError(error)
+                            completion(.networkFail)
                         }
                     })
-            
-            return Disposables.create()
-        }
     }
     
-    func loginWithGoogle(token : String)->Observable<User>{
-        return Observable.create{ observer -> Disposable in
+    func loginWithGoogle(token : String , completion: @escaping (NetworkResult<Any>)->Void){
             
             let url = APIConstants.loginWithGoogle
             let headers : HTTPHeaders = ["Content-Type" : "application/json"]
@@ -83,24 +77,19 @@ struct LoginAPI {
                                 let decoder = JSONDecoder()
                                 guard let decodedData = try? decoder.decode(BaseResponse<User>.self, from: data) else {
                                     return}
-                                observer.onNext(decodedData.data!)
-                                observer.onCompleted()
+                                completion(.success(decodedData.data!))
                             default:
                                 print("예외처리")
                             }
                         case .failure(let error):
                             print(error)
-                            observer.onError(error)
+                            completion(.networkFail)
                         }
                     })
-            
-            return Disposables.create()
-        }
     }
     
     
-    func logout()->Observable<Bool>{
-        return Observable.create{ observer -> Disposable in
+    func logout(completion: @escaping (NetworkResult<Any>) -> Void){
             
             let url = APIConstants.logout
             let headers : HTTPHeaders = ["Content-Type" : "application/json"]
@@ -125,25 +114,19 @@ struct LoginAPI {
                                 let decoder = JSONDecoder()
                                 guard let decodedData = try? decoder.decode(BaseResponse<Bool>.self, from: data) else {
                                     return}
-                                observer.onNext(decodedData.data!)
-                                observer.onCompleted()
+                                completion(.success(decodedData.data!))
                             default:
                                 print("예외처리")
                             }
                         case .failure(let error):
                             print(error)
-                            observer.onError(error)
+                            completion(.networkFail)
                         }
                     })
-            
-            return Disposables.create()
-        }
     }
     
-    func getUser()->Observable<User>{
-       
-       return Observable.create{ observer -> Disposable in
-           
+    func getUser(completion: @escaping (NetworkResult<Any>) -> Void){
+                  
            let url = APIConstants.getUser
            let headers : HTTPHeaders = ["Content-Type" : "application/json"]
            let params: Parameters = ["authToken" : KeyChain().read(key: "token")]
@@ -169,19 +152,16 @@ struct LoginAPI {
                                let decoder = JSONDecoder()
                                guard let decodedData = try? decoder.decode(User.self, from: data) else {
                                    return}
-                               observer.onNext(decodedData)
-                               observer.onCompleted()
+                               completion(.success(decodedData))
                            default:
                                print("예외처리")
                            }
                        case .failure(let error):
                            print(error)
-                           observer.onError(error)
+                           completion(.networkFail)
                        }
                    })
            
-           return Disposables.create()
-       }
    }
     
     

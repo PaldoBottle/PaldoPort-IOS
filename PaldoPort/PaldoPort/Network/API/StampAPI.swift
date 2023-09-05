@@ -12,15 +12,16 @@ import Alamofire
 struct StampAPI{
     static let shared = StampAPI()
     
-    func getAllStamp()->Observable<[Stamp]>{
+    func getAllStamp(completion: @escaping (NetworkResult<Any>) -> Void){
        
-       return Observable.create{ observer -> Disposable in
-           
            let url = APIConstants.getAllStamp
            let headers : HTTPHeaders = ["Content-Type" : "application/json"]
+           let params: Parameters = ["authToken" : "cGFsZG9fbWFzdGVyYWNjb3VudA=="]
            
            let request = AF.request(url,
-                                    method: .get,
+                                    method: .post,
+                                    parameters: params,
+                                    encoding: JSONEncoding.default,
                                     headers: headers)
            
            request.responseData(completionHandler: { (response) in
@@ -29,7 +30,6 @@ struct StampAPI{
                            guard let statusCode = response.response?.statusCode else {
                                return
                            }
-                           
                            switch statusCode {
                            case 200:
                                guard let data = response.value else {
@@ -38,30 +38,23 @@ struct StampAPI{
                                let decoder = JSONDecoder()
                                guard let decodedData = try? decoder.decode([Stamp].self, from: data) else {
                                    return}
-                               observer.onNext(decodedData)
-                               observer.onCompleted()
+                               completion(.success(decodedData))
                            default:
                                print("예외처리")
                            }
                        case .failure(let error):
                            print(error)
-                           observer.onError(error)
+                           completion(.networkFail)
                        }
                    })
-           
-           return Disposables.create()
-       }
    }
     
     
     
-    func issueStamp(supDistrict : String, district : String)->Observable<StampDetail>{
-        
-        return Observable.create{ observer -> Disposable in
-            
+    func issueStamp(supDistrict : String, district : String, completion: @escaping (NetworkResult<Any>)->Void){
             let url = APIConstants.issueStamp
             let headers : HTTPHeaders = ["Content-Type" : "application/json"]
-            let params: Parameters = ["supDistrict" : supDistrict , "district" : district]
+            let params: Parameters = ["supDistrict" : supDistrict , "district" : district, "authToken" : "cGFsZG9fbWFzdGVyYWNjb3VudA=="]
             
             let request = AF.request(url,
                                      method: .post,
@@ -75,7 +68,7 @@ struct StampAPI{
                             guard let statusCode = response.response?.statusCode else {
                                 return
                             }
-                            
+                            print(statusCode)
                             switch statusCode {
                             case 200:
                                 guard let data = response.value else {
@@ -84,25 +77,19 @@ struct StampAPI{
                                 let decoder = JSONDecoder()
                                 guard let decodedData = try? decoder.decode(StampDetail.self, from: data) else {
                                     return}
-                                observer.onNext(decodedData)
-                                observer.onCompleted()
+                                completion(.success(decodedData))
                             default:
                                 print("예외처리")
                             }
                         case .failure(let error):
                             print(error)
-                            observer.onError(error)
+                            completion(.networkFail)
                         }
                     })
-            
-            return Disposables.create()
-        }
     }
     
-    func getStampDetail(supDistrict : String, district : String)->Observable<StampDetail>{
+    func getStampDetail(supDistrict : String, district : String,completion: @escaping (NetworkResult<Any>)->Void){
         
-        return Observable.create{ observer -> Disposable in
-            
             let url = APIConstants.getStampDetail + "/\(supDistrict)/\(district)/detail"
             let headers : HTTPHeaders = ["Content-Type" : "application/json"]
             
@@ -125,19 +112,15 @@ struct StampAPI{
                                 let decoder = JSONDecoder()
                                 guard let decodedData = try? decoder.decode(StampDetail.self, from: data) else {
                                     return}
-                                observer.onNext(decodedData)
-                                observer.onCompleted()
+                                completion(.success(decodedData))
                             default:
                                 print("예외처리")
                             }
                         case .failure(let error):
                             print(error)
-                            observer.onError(error)
+                            completion(.networkFail)
                         }
                     })
-            
-            return Disposables.create()
-        }
     }
 
 }

@@ -6,9 +6,7 @@ import Alamofire
 struct ChallengeAPI{
     static let shared = ChallengeAPI()
     
-    func getAchievedChallenge()->Observable<[Challenge]>{
-       
-       return Observable.create{ observer -> Disposable in
+    func getAchievedChallenge(completion: @escaping (NetworkResult<Any>) -> Void){
            
            let url = APIConstants.getAchievedChallenge
            let headers : HTTPHeaders = ["Content-Type" : "application/json"]
@@ -35,30 +33,25 @@ struct ChallengeAPI{
                                let decoder = JSONDecoder()
                                guard let decodedData = try? decoder.decode([Challenge].self, from: data) else {
                                    return}
-                               observer.onNext(decodedData)
-                               observer.onCompleted()
+                               completion(.success(decodedData))
                            default:
                                print("예외처리")
                            }
                        case .failure(let error):
                            print(error)
-                           observer.onError(error)
+                           completion(.networkFail)
                        }
                    })
-           
-           return Disposables.create()
-       }
    }
     
     
-    func getAllChallengeList()->Observable<[Challenge]>{
+    func getAllChallengeList(completion: @escaping (NetworkResult<Any>) -> Void){
        
-       return Observable.create{ observer -> Disposable in
-           
            let url = APIConstants.getAllChallengeList
            let headers : HTTPHeaders = ["Content-Type" : "application/json"]
-           let params: Parameters = ["authToken" : KeyChain().read(key: "token")]
-           
+//           let params: Parameters = ["authToken" : KeyChain().read(key: "token")]
+           let params: Parameters = [ "authToken" : "cGFsZG9fbWFzdGVyYWNjb3VudA=="]
+       
            let request = AF.request(url,
                                     method: .post,
                                     parameters: params,
@@ -66,11 +59,13 @@ struct ChallengeAPI{
                                     headers: headers)
            
            request.responseData(completionHandler: { (response) in
+               print(response)
                        switch response.result{
                        case .success:
                            guard let statusCode = response.response?.statusCode else {
                                return
                            }
+                           print(statusCode)
                            
                            switch statusCode {
                            case 200:
@@ -80,19 +75,14 @@ struct ChallengeAPI{
                                let decoder = JSONDecoder()
                                guard let decodedData = try? decoder.decode([Challenge].self, from: data) else {
                                    return}
-                               observer.onNext(decodedData)
-                               observer.onCompleted()
+                               completion(.success(decodedData))
                            default:
                                print("예외처리")
                            }
                        case .failure(let error):
-                           print(error)
-                           observer.onError(error)
+                           completion(.networkFail)
                        }
                    })
-           
-           return Disposables.create()
-       }
    }
 
 }

@@ -6,10 +6,7 @@ import Alamofire
 struct RegionAPI{
     static let shared = RegionAPI()
     
-    func getAllAnnotation()->Observable<[Annotation]>{
-       
-       return Observable.create{ observer -> Disposable in
-           
+    func getAllAnnotation(completion: @escaping (NetworkResult<Any>) -> Void){
            let url = APIConstants.getAllAnnotation
            let headers : HTTPHeaders = ["Content-Type" : "application/json"]
            
@@ -32,30 +29,27 @@ struct RegionAPI{
                                let decoder = JSONDecoder()
                                guard let decodedData = try? decoder.decode([Annotation].self, from: data) else {
                                    return}
-                               observer.onNext(decodedData)
-                               observer.onCompleted()
+                               completion(.success(decodedData))
                            default:
-                               print("예외처리")
+                               completion(.networkFail)
                            }
                        case .failure(let error):
                            print(error)
-                           observer.onError(error)
+                           completion(.networkFail)
                        }
                    })
-           
-           return Disposables.create()
-       }
+       
    }
 
     
-     func getRegionDetail(supDistrict : String, district : String)->Observable<Region>{
+     func getRegionDetail(supDistrict : String, district : String, completion: @escaping (NetworkResult<Region>)->Void){
         
-        return Observable.create{ observer -> Disposable in
-            
-            let url = APIConstants.getRegion + "/\(supDistrict)/\(district)/detail"
+            var url = APIConstants.getRegion + "/\(supDistrict)/\(district)/detail"
+            let urlEncoding = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+
             let headers : HTTPHeaders = ["Content-Type" : "application/json"]
             
-            let request = AF.request(url,
+            let request = AF.request(urlEncoding,
                                      method: .get,
                                      headers: headers)
             
@@ -75,19 +69,16 @@ struct RegionAPI{
                                 guard let decodedData = try? decoder.decode(RegionData.self, from: data) else {
                                     return}
                                 var region : Region = Region(district: district, supDistrict: supDistrict, description: decodedData.description)
-                                observer.onNext(region)
-                                observer.onCompleted()
+                                completion(.success(region))
                             default:
                                 print("예외처리")
                             }
                         case .failure(let error):
                             print(error)
-                            observer.onError(error)
+                            completion(.networkFail)
                         }
                     })
-            
-            return Disposables.create()
-        }
+        
     }
 
 }

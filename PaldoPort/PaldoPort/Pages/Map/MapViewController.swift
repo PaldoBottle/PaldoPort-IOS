@@ -15,7 +15,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     var locationManager: CLLocationManager!
     
-    let viewModel = MapViewModel()
+    var annotations : [Annotation] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,23 +24,48 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         view.sendSubviewToBack(mapView)
         view.bringSubviewToFront(pardoPortLabel)
-
+        
+        getAnnotation()
         getUserLocationInfo()
         mapInit()
-        annotationInit()
-        registerAnnotationView()
     }
     
     
     @IBAction func onTapMenuButton(_ sender: Any) {
         let menuModal = MenuModalViewController()
         present(menuModal, animated: true, completion: nil)
+        
     }
     
-    func onTapAnnotation(supDistrict : String, district : String){
+    func getAnnotation(){
+        RegionAPI.shared.getAllAnnotation{
+            (networkResult) in
+                            switch networkResult{
+                            case .success(let data):
+                                DispatchQueue.main.async {
+                                    self.annotations = data as! [Annotation]
+                                    self.annotationInit()
+                                    self.registerAnnotationView()
+                                }
+                            case .requestErr(let msg):
+                                if let message = msg as? String {
+                                    print(message)
+                                }
+                            case .pathErr:
+                                print("pathErr in getAnnotationAPI")
+                            case .serverErr:
+                                print("serverErr in getAnnotationAPI")
+                            case .networkFail:
+                                print("networkFail in getAnnotationAPI")
+                            }
+        }
+    }
+    
+    func onTapAnnotation(supDistrict : String, district : String, name : String){
         if let issueStampViewController = self.storyboard?.instantiateViewController(withIdentifier: "IssueStampViewController") as? IssueStampViewController{
             issueStampViewController.district = district
             issueStampViewController.supDistrict = supDistrict
+            issueStampViewController.name = name
             present(issueStampViewController, animated: true, completion: nil)
         }
     }
@@ -76,13 +101,12 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     func annotationInit(){
         
-        for annotation in viewModel.annotations {
+        for annotation in annotations {
             let pin = MKPointAnnotation()
             
             pin.coordinate = CLLocationCoordinate2D(latitude: annotation.latitude, longitude: annotation.longitude)
-            pin.title = annotation.district
-            pin.subtitle = annotation.supDistrict
-            
+            pin.title = annotation.name
+            pin.subtitle = annotation.supDistrict + " " + annotation.district
             mapView.addAnnotation(pin)
         }
     }
@@ -104,10 +128,15 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         let annotation = view.annotation
-        let supDistrict : String = annotation?.subtitle! ?? ""
-        let district : String = annotation?.title! ?? ""
+        let subTitle : String = annotation?.subtitle! ?? ""
+        let separatedArray = subTitle.components(separatedBy: " ")
+
+        let supDistrict : String = separatedArray[0]
+        let district : String = separatedArray[1]
+        let name : String = annotation?.title! ?? ""
         
-        onTapAnnotation(supDistrict: supDistrict, district: district)
+        
+        onTapAnnotation(supDistrict: supDistrict, district: district, name: name )
     }
     
     private func registerAnnotationView(){

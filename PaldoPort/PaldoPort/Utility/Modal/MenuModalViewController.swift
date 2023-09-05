@@ -10,7 +10,7 @@ import UIKit
 
 class MenuModalViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
-    let data = ["설정 및 개인정보", "내 스탬프", "저장됨", "로그아웃"]
+    let data = ["설정 및 개인정보", "내 스탬프", "챌린지", "로그아웃"]
     
     var menuView : UITableView!
     
@@ -54,8 +54,33 @@ class MenuModalViewController: UIViewController, UITableViewDelegate, UITableVie
     }
 
     // MARK: - UITableViewDelegate
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected: \(data[indexPath.row])")
+
+        let loginPageStoryboard : UIStoryboard = UIStoryboard(name: "MapView", bundle: nil)
+
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        switch indexPath.row {
+        case 0:
+            break
+        case 1:
+            print("흠")
+            if let targetViewController = storyboard?.instantiateViewController(withIdentifier: "MapNavigationViewController") {
+                print("애초에 여길안오나?")
+                if let navigationController = targetViewController.navigationController {
+                    guard let viewController = UIStoryboard(name: "MyStamp", bundle: nil).instantiateViewController(identifier: "MyStampViewController") as? MyStampViewController else {return}
+                    navigationController.pushViewController(viewController, animated: true)
+                }
+                print("여기까지 안오나")
+            }
+            self.dismiss(animated: true)
+        case 2:
+            guard let viewController = UIStoryboard(name: "Challenge", bundle: nil).instantiateViewController(identifier: "ChallengeViewController") as? ChallengeViewController else {return}
+            self.navigationController?.pushViewController(viewController, animated: true)
+        default:
+            return
+        }
+
     }
 }

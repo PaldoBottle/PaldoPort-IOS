@@ -25,10 +25,8 @@
 		D272FA202A79A9D20087C392 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272FA1F2A79A9D20087C392 /* MapViewController.swift */; };
 		D272FA222A79AA170087C392 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D272FA212A79AA170087C392 /* MapView.storyboard */; };
 		D272FA242A79AC190087C392 /* LoginPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D272FA232A79AC190087C392 /* LoginPage.storyboard */; };
-		D272FA262A7A3CA90087C392 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272FA252A7A3CA80087C392 /* MapViewModel.swift */; };
 		D272FA282A7A3E7F0087C392 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272FA272A7A3E7F0087C392 /* Annotation.swift */; };
 		D272FA322A7D4B250087C392 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D272FA312A7D4B250087C392 /* Main.storyboard */; };
-		D272FA372A8104C90087C392 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272FA362A8104C90087C392 /* LoginViewModel.swift */; };
 		D272FA392A810A960087C392 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272FA382A810A960087C392 /* LoginViewController.swift */; };
 		D2B7AF222A9E46620065CFC0 /* ClusterAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF212A9E46620065CFC0 /* ClusterAnnotationView.swift */; };
 		D2B7AF252A9EDAAC0065CFC0 /* IssueStampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF242A9EDAAC0065CFC0 /* IssueStampViewController.swift */; };
@@ -40,6 +38,16 @@
 		D2B7AF352AA398E10065CFC0 /* Stamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF342AA398E00065CFC0 /* Stamp.swift */; };
 		D2B7AF372AA39CFA0065CFC0 /* ChallengeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF362AA39CFA0065CFC0 /* ChallengeAPI.swift */; };
 		D2B7AF392AA39D890065CFC0 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF382AA39D890065CFC0 /* Challenge.swift */; };
+		D2B7AF3D2AA53AF40065CFC0 /* MyStamp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2B7AF3C2AA53AF40065CFC0 /* MyStamp.storyboard */; };
+		D2B7AF492AA540A70065CFC0 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF482AA540A70065CFC0 /* MyCollectionViewCell.swift */; };
+		D2B7AF4B2AA5832E0065CFC0 /* MyStampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF4A2AA5832E0065CFC0 /* MyStampViewController.swift */; };
+		D2B7AF522AA5CD9F0065CFC0 /* ChallengeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF512AA5CD9F0065CFC0 /* ChallengeCollectionViewCell.swift */; };
+		D2B7AF542AA5CED40065CFC0 /* Challenge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2B7AF532AA5CED40065CFC0 /* Challenge.storyboard */; };
+		D2B7AF562AA5D38D0065CFC0 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF552AA5D38D0065CFC0 /* ChallengeViewController.swift */; };
+		D2B7AF582AA603AD0065CFC0 /* MapNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF572AA603AD0065CFC0 /* MapNavigationViewController.swift */; };
+		D2B7AF5A2AA608170065CFC0 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF592AA608170065CFC0 /* NetworkResult.swift */; };
+		D2B7AF5C2AA650260065CFC0 /* GetStampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF5B2AA650260065CFC0 /* GetStampViewController.swift */; };
+		D2B7AF5E2AA790970065CFC0 /* StampDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF5D2AA790970065CFC0 /* StampDetailViewController.swift */; };
 		D2D302932A9B5AED00622DFF /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D302922A9B5AED00622DFF /* APIConstants.swift */; };
 		D2D3029A2A9DDCE500622DFF /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D302992A9DDCE500622DFF /* CustomAnnotation.swift */; };
 		D2EBDD852A865CD30046A5A7 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EBDD842A865CD30046A5A7 /* BaseResponse.swift */; };
@@ -96,10 +104,8 @@
 		D272FA1F2A79A9D20087C392 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D272FA212A79AA170087C392 /* MapView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
 		D272FA232A79AC190087C392 /* LoginPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginPage.storyboard; sourceTree = "<group>"; };
-		D272FA252A7A3CA80087C392 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		D272FA272A7A3E7F0087C392 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		D272FA312A7D4B250087C392 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		D272FA362A8104C90087C392 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D272FA382A810A960087C392 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D2B7AF212A9E46620065CFC0 /* ClusterAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterAnnotationView.swift; sourceTree = "<group>"; };
 		D2B7AF242A9EDAAC0065CFC0 /* IssueStampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueStampViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +117,16 @@
 		D2B7AF342AA398E00065CFC0 /* Stamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stamp.swift; sourceTree = "<group>"; };
 		D2B7AF362AA39CFA0065CFC0 /* ChallengeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeAPI.swift; sourceTree = "<group>"; };
 		D2B7AF382AA39D890065CFC0 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		D2B7AF3C2AA53AF40065CFC0 /* MyStamp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyStamp.storyboard; sourceTree = "<group>"; };
+		D2B7AF482AA540A70065CFC0 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		D2B7AF4A2AA5832E0065CFC0 /* MyStampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStampViewController.swift; sourceTree = "<group>"; };
+		D2B7AF512AA5CD9F0065CFC0 /* ChallengeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeCollectionViewCell.swift; sourceTree = "<group>"; };
+		D2B7AF532AA5CED40065CFC0 /* Challenge.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Challenge.storyboard; sourceTree = "<group>"; };
+		D2B7AF552AA5D38D0065CFC0 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		D2B7AF572AA603AD0065CFC0 /* MapNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNavigationViewController.swift; sourceTree = "<group>"; };
+		D2B7AF592AA608170065CFC0 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		D2B7AF5B2AA650260065CFC0 /* GetStampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStampViewController.swift; sourceTree = "<group>"; };
+		D2B7AF5D2AA790970065CFC0 /* StampDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampDetailViewController.swift; sourceTree = "<group>"; };
 		D2D302922A9B5AED00622DFF /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		D2D302992A9DDCE500622DFF /* CustomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		D2EBDD842A865CD30046A5A7 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
@@ -239,6 +255,8 @@
 				D272FA212A79AA170087C392 /* MapView.storyboard */,
 				D272FA232A79AC190087C392 /* LoginPage.storyboard */,
 				D272FA312A7D4B250087C392 /* Main.storyboard */,
+				D2B7AF3C2AA53AF40065CFC0 /* MyStamp.storyboard */,
+				D2B7AF532AA5CED40065CFC0 /* Challenge.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -269,6 +287,7 @@
 				D2EBDD8A2A865FA10046A5A7 /* API */,
 				D2EBDD842A865CD30046A5A7 /* BaseResponse.swift */,
 				D2EBDD882A865EF40046A5A7 /* Router.swift */,
+				D2B7AF592AA608170065CFC0 /* NetworkResult.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -276,6 +295,7 @@
 		D272FA1C2A79A46D0087C392 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				D2B7AF472AA5408D0065CFC0 /* CollectionView */,
 				D2D302942A9CE66100622DFF /* Annotation */,
 				D2621B822A81271A00B6722C /* Modal */,
 				D2B7AF282A9EDF340065CFC0 /* LoadingIndicator.swift */,
@@ -286,6 +306,8 @@
 		D272FA1D2A79A49E0087C392 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				D2B7AF4C2AA5CC240065CFC0 /* Challenge */,
+				D2B7AF3E2AA53AFD0065CFC0 /* Stamp */,
 				D272FA352A8104990087C392 /* Login */,
 				D272FA1E2A79A56E0087C392 /* Map */,
 			);
@@ -296,8 +318,9 @@
 			isa = PBXGroup;
 			children = (
 				D272FA1F2A79A9D20087C392 /* MapViewController.swift */,
-				D272FA252A7A3CA80087C392 /* MapViewModel.swift */,
 				D2B7AF242A9EDAAC0065CFC0 /* IssueStampViewController.swift */,
+				D2B7AF572AA603AD0065CFC0 /* MapNavigationViewController.swift */,
+				D2B7AF5B2AA650260065CFC0 /* GetStampViewController.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -305,10 +328,35 @@
 		D272FA352A8104990087C392 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				D272FA362A8104C90087C392 /* LoginViewModel.swift */,
 				D272FA382A810A960087C392 /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		D2B7AF3E2AA53AFD0065CFC0 /* Stamp */ = {
+			isa = PBXGroup;
+			children = (
+				D2B7AF4A2AA5832E0065CFC0 /* MyStampViewController.swift */,
+				D2B7AF5D2AA790970065CFC0 /* StampDetailViewController.swift */,
+			);
+			path = Stamp;
+			sourceTree = "<group>";
+		};
+		D2B7AF472AA5408D0065CFC0 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				D2B7AF482AA540A70065CFC0 /* MyCollectionViewCell.swift */,
+				D2B7AF512AA5CD9F0065CFC0 /* ChallengeCollectionViewCell.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		D2B7AF4C2AA5CC240065CFC0 /* Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				D2B7AF552AA5D38D0065CFC0 /* ChallengeViewController.swift */,
+			);
+			path = Challenge;
 			sourceTree = "<group>";
 		};
 		D2D302912A9B5AD900622DFF /* Constants */ = {
@@ -474,10 +522,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2B7AF542AA5CED40065CFC0 /* Challenge.storyboard in Resources */,
 				D272F9F22A79A2890087C392 /* LaunchScreen.storyboard in Resources */,
 				D2621B8A2A83E2E100B6722C /* .gitignore in Resources */,
 				D272FA322A7D4B250087C392 /* Main.storyboard in Resources */,
 				D272F9EF2A79A2890087C392 /* Assets.xcassets in Resources */,
+				D2B7AF3D2AA53AF40065CFC0 /* MyStamp.storyboard in Resources */,
 				D272FA222A79AA170087C392 /* MapView.storyboard in Resources */,
 				D2621B882A83DDD400B6722C /* Config.xcconfig in Resources */,
 				D272FA242A79AC190087C392 /* LoginPage.storyboard in Resources */,
@@ -643,14 +693,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D272F9E32A79A2890087C392 /* AppDelegate.swift in Sources */,
+				D2B7AF522AA5CD9F0065CFC0 /* ChallengeCollectionViewCell.swift in Sources */,
 				D2B7AF392AA39D890065CFC0 /* Challenge.swift in Sources */,
 				D2D3029A2A9DDCE500622DFF /* CustomAnnotation.swift in Sources */,
-				D272FA262A7A3CA90087C392 /* MapViewModel.swift in Sources */,
+				D2B7AF5A2AA608170065CFC0 /* NetworkResult.swift in Sources */,
+				D2B7AF4B2AA5832E0065CFC0 /* MyStampViewController.swift in Sources */,
 				D2B7AF332AA38BC60065CFC0 /* Region.swift in Sources */,
 				D2B7AF292A9EDF340065CFC0 /* LoadingIndicator.swift in Sources */,
 				D272F9E52A79A2890087C392 /* SceneDelegate.swift in Sources */,
 				D2B7AF222A9E46620065CFC0 /* ClusterAnnotationView.swift in Sources */,
-				D272FA372A8104C90087C392 /* LoginViewModel.swift in Sources */,
 				D2D302932A9B5AED00622DFF /* APIConstants.swift in Sources */,
 				D2621B862A812E2400B6722C /* TableCellWithIcon.swift in Sources */,
 				D2B7AF312AA375E60065CFC0 /* RegionAPI.swift in Sources */,
@@ -661,13 +712,18 @@
 				D2B7AF2D2AA350B30065CFC0 /* StampAPI.swift in Sources */,
 				D2B7AF372AA39CFA0065CFC0 /* ChallengeAPI.swift in Sources */,
 				D2EBDD892A865EF40046A5A7 /* Router.swift in Sources */,
+				D2B7AF562AA5D38D0065CFC0 /* ChallengeViewController.swift in Sources */,
 				D272FA392A810A960087C392 /* LoginViewController.swift in Sources */,
 				D272FA202A79A9D20087C392 /* MapViewController.swift in Sources */,
 				D272FA282A7A3E7F0087C392 /* Annotation.swift in Sources */,
 				D272F9ED2A79A2890087C392 /* PaldoPort.xcdatamodeld in Sources */,
+				D2B7AF582AA603AD0065CFC0 /* MapNavigationViewController.swift in Sources */,
 				D2EBDD8C2A8662560046A5A7 /* LoginAPI.swift in Sources */,
+				D2B7AF5C2AA650260065CFC0 /* GetStampViewController.swift in Sources */,
 				D2B7AF272A9EDEAF0065CFC0 /* KeyChain.swift in Sources */,
+				D2B7AF492AA540A70065CFC0 /* MyCollectionViewCell.swift in Sources */,
 				D2621B842A81273400B6722C /* MenuModalViewController.swift in Sources */,
+				D2B7AF5E2AA790970065CFC0 /* StampDetailViewController.swift in Sources */,
 				D2EBDD852A865CD30046A5A7 /* BaseResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

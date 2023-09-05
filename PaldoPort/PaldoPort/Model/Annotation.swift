@@ -9,13 +9,12 @@ import Foundation
 
 
 struct Annotation : Codable{
-    var id : Int
     // 위도
     var latitude : Double
     // 경도
     var longitude : Double
     var supDistrict : String
     var district : String
-    var name : String?
+    var name : String
     
 }

@@ -32,10 +32,34 @@ class GetStampViewController : UIViewController{
         imageView.kf.setImage(with:url)
         imageView.layer.cornerRadius = imageView.frame.height/2
         imageView.clipsToBounds = true
+        
+        getUser()
     }
     
     
     @IBAction func onTapConfirm(_ sender: Any) {
         self.presentingViewController?.presentingViewController?.dismiss(animated: true)
+    }
+    
+    func getUser(){
+        LoginAPI.shared.getUser{
+            (networkResult) in
+            switch networkResult{
+            case .success(let data):
+                let user : User = data as! User
+                UserManager.shared.setUser(user)
+            case .requestErr(let msg):
+                if let message = msg as? String {
+                    print(message)
+                }
+            case .pathErr:
+                print("pathErr in getUser")
+            case .serverErr:
+                print("serverErr in getUser")
+            case .networkFail:
+                print("networkFail in getUser")
+            }
+        }
+        
     }
 }

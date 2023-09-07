@@ -1,14 +1,14 @@
 
 import UIKit
 import KakaoSDKUser
-import RxKakaoSDKUser
 import GoogleSignIn
 import Kingfisher
 
 class MyStampViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
+
+    @IBOutlet weak var haveView: UIView!
     var stampList : [Stamp] = []
     
     override func viewDidLoad() {
@@ -18,21 +18,13 @@ class MyStampViewController: UIViewController {
         collectionView.delegate = self
         
         self.collectionView.collectionViewLayout = createCompositionalLayout()
-        
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         getStampList()
     }
     
-//    @IBSegueAction func onTapStamp(_ coder: NSCoder) -> UIViewController? {
-//        return StampDetailViewController()
-//        
-//    }
-    func showAlert(){
-        let alert = UIAlertController(title: "로그인할 수 없음", message: "계정을 읽는데 실패하였습니다.", preferredStyle: .alert )
-        let confirm = UIAlertAction(title: "확인", style: .default, handler: nil)
-        
-        alert.addAction(confirm)
-        
-        present(alert, animated: true, completion: nil)
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     func getStampList(){
@@ -59,6 +51,15 @@ class MyStampViewController: UIViewController {
                 print("networkFail in getRegionDetail")
             }
         }
+    }
+    
+    func showAlert(){
+        let alert = UIAlertController(title: "스탬프가 없어요!", message: "명소에 방문에 스탬프를 획득해보세요", preferredStyle: .alert )
+        let confirm = UIAlertAction(title: "확인", style: .default, handler: nil)
+        
+        alert.addAction(confirm)
+        
+        present(alert, animated: true, completion: nil)
     }
     
 }
@@ -97,7 +98,7 @@ extension MyStampViewController {
 //            section.orthogonalScrollingBehavior = .groupPaging
             
             // 섹션에 대한 간격 설정
-            section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20)
+            section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: 20, trailing: 20)
             return section
         }
         return layout
@@ -129,6 +130,10 @@ extension MyStampViewController : UICollectionViewDataSource{
                 cell.imageView.layer.cornerRadius = cell.imageView.frame.width/2
                    // 뷰의 경계에 맞춰준다
                 cell.imageView.clipsToBounds = true
+        
+                if(stampList[indexPath.item].have){
+                    cell.haveView.isHidden = true
+                }
                 
                 return cell
     }
@@ -137,5 +142,20 @@ extension MyStampViewController : UICollectionViewDataSource{
 }
 
 extension MyStampViewController : UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if(stampList[indexPath.item].have){
+            let stamp = stampList[indexPath.item]
+            if let stampDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "StampDetailViewController") as? StampDetailViewController{
+                stampDetailViewController.district = stamp.district
+                stampDetailViewController.supDistrict = stamp.supDistrict
+                stampDetailViewController.imageUrl = stamp.imageUrl
+                
+                self.present(stampDetailViewController, animated: true, completion: nil)
+            }
+        }else{
+            self.showAlert()
+        }
+       
+    }
 }

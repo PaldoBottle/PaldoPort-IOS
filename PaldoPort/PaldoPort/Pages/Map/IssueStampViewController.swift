@@ -32,38 +32,41 @@ class IssueStampViewController : UIViewController{
     
     @IBAction func onTapIssueStamp(_ sender: Any) {
         
-//        if(){
-//
-//        }else{
-//
-//        }
-        
-        StampAPI.shared.issueStamp(supDistrict: supDistrict, district: district){
-            (networkResult) in
-            switch networkResult{
-            case .success(let data):
-                let stampDetail : StampDetail = data as! StampDetail
-                if let getStampViewController = self.storyboard?.instantiateViewController(withIdentifier: "GetStampViewController") as? GetStampViewController{
-                    getStampViewController.districtStr = self.supDistrict+" "+self.district
-                    getStampViewController.nameStr = self.name
-                    getStampViewController.order = stampDetail.publishNumber!
-                    getStampViewController.imageURL = stampDetail.imageUrl
-                    
-                    self.present(getStampViewController, animated: true, completion: nil)
-                }
+        if(supDistrict == "서울시"){
+            LoadingIndicator.showLoading()
+            
+            StampAPI.shared.issueStamp(supDistrict: supDistrict, district: district){
+                (networkResult) in
+                switch networkResult{
+                case .success(let data):
+                    let stampDetail : StampDetail = data as! StampDetail
+                    if let getStampViewController = self.storyboard?.instantiateViewController(withIdentifier: "GetStampViewController") as? GetStampViewController{
+                        getStampViewController.districtStr = self.supDistrict+" "+self.district
+                        getStampViewController.nameStr = self.name
+                        getStampViewController.order = stampDetail.publishNumber!
+                        getStampViewController.imageURL = stampDetail.imageUrl
+                        
+                        self.present(getStampViewController, animated: true, completion: nil)
+                    }
 
-            case .requestErr(let msg):
-            if let message = msg as? String {
-                print(message)
+                case .requestErr(let msg):
+                if let message = msg as? String {
+                    print(message)
+                }
+                case .pathErr:
+                    print("pathErr in getRegionDetail")
+                case .serverErr:
+                    print("serverErr in getRegionDetail")
+                case .networkFail:
+                    print("networkFail in getRegionDetail")
+                }
+                LoadingIndicator.hideLoading()
             }
-            case .pathErr:
-                print("pathErr in getRegionDetail")
-            case .serverErr:
-                print("serverErr in getRegionDetail")
-            case .networkFail:
-                print("networkFail in getRegionDetail")
-            }
+        }else{
+            self.showAlert()
         }
+        
+
     }
     
     func getCurrentLocation() {
@@ -134,4 +137,13 @@ extension IssueStampViewController : CLLocationManagerDelegate{
        func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
            print("위치 정보를 가져오는 데 실패했습니다: \(error.localizedDescription)")
        }
+    
+        func showAlert(){
+          let alert = UIAlertController(title: "랜드마크를 방문해서 스탬프를 얻어보세요!", message: "해당 랜드마크가 있는 지역으로 가면 스탬프를 발급할 수 있어요.", preferredStyle: .alert )
+          let confirm = UIAlertAction(title: "확인", style: .default, handler: nil)
+          
+          alert.addAction(confirm)
+          
+          present(alert, animated: true, completion: nil)
+      }
 }

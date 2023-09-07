@@ -17,6 +17,6 @@ struct Stamp: Codable {
 struct StampDetail: Codable {
     var publishDate : String?
     var publishNumber : Int?
-    var description : String?
+    var point : Int?
     var imageUrl : String
 }

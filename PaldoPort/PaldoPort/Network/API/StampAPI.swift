@@ -16,7 +16,7 @@ struct StampAPI{
        
            let url = APIConstants.getAllStamp
            let headers : HTTPHeaders = ["Content-Type" : "application/json"]
-           let params: Parameters = ["authToken" : "cGFsZG9fbWFzdGVyYWNjb3VudA=="]
+           let params: Parameters = ["authToken" : "Bearer " + KeyChain().read(key:"token")!]
            
            let request = AF.request(url,
                                     method: .post,
@@ -54,7 +54,7 @@ struct StampAPI{
     func issueStamp(supDistrict : String, district : String, completion: @escaping (NetworkResult<Any>)->Void){
             let url = APIConstants.issueStamp
             let headers : HTTPHeaders = ["Content-Type" : "application/json"]
-            let params: Parameters = ["supDistrict" : supDistrict , "district" : district, "authToken" : "cGFsZG9fbWFzdGVyYWNjb3VudA=="]
+            let params: Parameters = ["supDistrict" : supDistrict , "district" : district, "authToken" : "Bearer " + KeyChain().read(key:"token")!]
             
             let request = AF.request(url,
                                      method: .post,
@@ -91,12 +91,17 @@ struct StampAPI{
     func getStampDetail(supDistrict : String, district : String,completion: @escaping (NetworkResult<Any>)->Void){
         
             let url = APIConstants.getStampDetail + "/\(supDistrict)/\(district)/detail"
+            let urlEncoding = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
             let headers : HTTPHeaders = ["Content-Type" : "application/json"]
+        let params: Parameters = ["supDistrict" : supDistrict , "district" : district, "authToken" : "Bearer " + KeyChain().read(key:"token")!]
             
-            let request = AF.request(url,
-                                     method: .get,
-                                     headers: headers)
-            
+            let request = AF.request(urlEncoding,
+                                 method: .post,
+                                 parameters: params,
+                                 encoding: JSONEncoding.default,
+                                 headers: headers)
+        
+        
             request.responseData(completionHandler: { (response) in
                         switch response.result{
                         case .success:

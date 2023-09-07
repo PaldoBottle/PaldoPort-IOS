@@ -11,7 +11,7 @@ struct APIConstants {
     // MARK: - Users
     
     // vv
-    static let loginWithKakao = baseURL + "/login/kakao"
+    static let loginWithKakao = baseURL + "/account/signin/kakao"
     
     // vv
     static let loginWithGoogle = baseURL + "/login/google"
@@ -23,7 +23,7 @@ struct APIConstants {
     
     // MARK: - Challenge
     static let getAchievedChallenge = baseURL + "/challenge/achieve"
-    // v
+    // vv
     static let getAllChallengeList = baseURL + "/challenge/list"
     
     // MARK: - Stamp
@@ -31,10 +31,10 @@ struct APIConstants {
     // vv
     static let getAllStamp = baseURL + "/stamp/user/list"
     
-    // v
+    // vv
     static let issueStamp = baseURL + "/stamp/user/new"
     
-    
+    // vv
     static let getStampDetail = baseURL + "/stamp"
     
     // MARK: - Region

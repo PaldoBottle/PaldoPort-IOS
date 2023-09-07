@@ -2,7 +2,6 @@
 import UIKit
 import RxSwift
 import KakaoSDKUser
-import RxKakaoSDKUser
 import GoogleSignIn
 
 class ChallengeViewController: UIViewController {
@@ -19,7 +18,14 @@ class ChallengeViewController: UIViewController {
         
         self.collectionView.collectionViewLayout = createCompositionalLayout()
         getChallengeList()
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     func showAlert(){
@@ -40,6 +46,7 @@ class ChallengeViewController: UIViewController {
               
                 DispatchQueue.main.async {
                     self.challengeList = challenges
+                    self.collectionView.reloadData()
                 }
 
             case .requestErr(let msg):
@@ -112,12 +119,16 @@ extension ChallengeViewController : UICollectionViewDataSource{
 
                 // 라벨 설정
                 cell.name.text = challengeList[indexPath.item].name
-                cell.desc.text = challengeList[indexPath.item].description
+                cell.textView.text = challengeList[indexPath.item].description
                 cell.point.text = "포인트 : \(challengeList[indexPath.item].point)P"
         
                 cell.contentView.layer.cornerRadius = 8
                 cell.contentView.layer.borderWidth = 1
                 cell.contentView.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        
+                if(challengeList[indexPath.item].isAchieved!){
+                        cell.haveView.isHidden = true
+                }
                 
                 return cell
     }

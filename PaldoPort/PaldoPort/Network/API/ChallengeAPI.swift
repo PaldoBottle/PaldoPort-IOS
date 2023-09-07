@@ -10,7 +10,7 @@ struct ChallengeAPI{
            
            let url = APIConstants.getAchievedChallenge
            let headers : HTTPHeaders = ["Content-Type" : "application/json"]
-           let params: Parameters = ["authToken" : KeyChain().read(key: "token")]
+           let params: Parameters = ["authToken" : "Bearer " + KeyChain().read(key:"token")!]
            
            let request = AF.request(url,
                                     method: .post,
@@ -49,8 +49,7 @@ struct ChallengeAPI{
        
            let url = APIConstants.getAllChallengeList
            let headers : HTTPHeaders = ["Content-Type" : "application/json"]
-//           let params: Parameters = ["authToken" : KeyChain().read(key: "token")]
-           let params: Parameters = [ "authToken" : "cGFsZG9fbWFzdGVyYWNjb3VudA=="]
+           let params: Parameters = [ "authToken" : "Bearer " + KeyChain().read(key:"token")!]
        
            let request = AF.request(url,
                                     method: .post,

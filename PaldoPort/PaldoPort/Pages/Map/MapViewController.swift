@@ -33,8 +33,26 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     @IBAction func onTapMenuButton(_ sender: Any) {
         let menuModal = MenuModalViewController()
-        present(menuModal, animated: true, completion: nil)
+        menuModal.gotoStampPage = {
+            self.goToStampPage()
+        }
+        menuModal.gotoChallengePage = {
+            self.gotoChallengePage()
+        }
+        present(menuModal, animated: true)
         
+    }
+    
+    func gotoChallengePage(){
+        let viewContoller = UIStoryboard(name: "Challenge", bundle: nil).instantiateViewController(withIdentifier: "ChallengeViewController")
+        
+        self.navigationController?.pushViewController(viewContoller, animated: true)
+    }
+    
+    func goToStampPage(){
+        let viewContoller = UIStoryboard(name: "MyStamp", bundle: nil).instantiateViewController(withIdentifier: "MyStampViewController")
+        
+        self.navigationController?.pushViewController(viewContoller, animated: true)
     }
     
     func getAnnotation(){
@@ -137,6 +155,11 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         
         onTapAnnotation(supDistrict: supDistrict, district: district, name: name )
+    }
+    
+    func pushStampPage(){
+        guard let viewController = UIStoryboard(name: "MyStamp", bundle: nil).instantiateViewController(identifier: "MyStampViewController") as? MyStampViewController else {return}
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     private func registerAnnotationView(){

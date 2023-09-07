@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import RxKakaoSDKAuth
 import KakaoSDKAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -15,17 +14,64 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
         if let url = URLContexts.first?.url {
-            if (AuthApi.isKakaoTalkLoginUrl(url)) {
-                _ = AuthController.rx.handleOpenUrl(url: url)
-            }
-        }
+                       if (AuthApi.isKakaoTalkLoginUrl(url)) {
+                           _ = AuthController.handleOpenUrl(url: url)
+                       }
+                   }
     }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+
+        window = UIWindow(windowScene: windowScene)
+        window?.windowScene = windowScene
+
+        let token = KeyChain().read(key: "token")
+        if(token == nil){
+            // 토큰이 없는 경우
+            // 로그인 페이지로
+            let mainStoryboard = UIStoryboard(name: "LoginPage", bundle: nil)
+            let mainViewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController")
+
+             window?.rootViewController = mainViewController
+             window?.makeKeyAndVisible()
+
+
+        }else{
+            // 토큰이 있는 경우
+            // 유저 정보 요청
+            LoginAPI.shared.getUser{
+                (networkResult) in
+                switch networkResult{
+                case .success(let data):
+                    let user : User = data as! User
+                    UserManager.shared.setUser(user)
+
+                    // 메인 페이지로
+                    let mainStoryboard = UIStoryboard(name: "MapView", bundle: nil)
+                    let mainViewController = mainStoryboard.instantiateViewController(withIdentifier: "MapNavigationViewController")
+
+                    self.window?.rootViewController = mainViewController
+                    self.window?.makeKeyAndVisible()
+
+                case .requestErr(let msg):
+                    if let message = msg as? String {
+                        print(message)
+                    }
+                case .pathErr:
+                    print("pathErr in getUser")
+                case .serverErr:
+                    print("serverErr in getUser")
+                case .networkFail:
+                    let mainStoryboard = UIStoryboard(name: "LoginPage", bundle: nil)
+                    let mainViewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController")
+
+                    self.window?.rootViewController = mainViewController
+                    self.window?.makeKeyAndVisible()
+                    print("networkFail in getUser")
+                }
+            }
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

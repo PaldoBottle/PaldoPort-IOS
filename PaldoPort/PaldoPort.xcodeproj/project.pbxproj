@@ -48,6 +48,7 @@
 		D2B7AF5A2AA608170065CFC0 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF592AA608170065CFC0 /* NetworkResult.swift */; };
 		D2B7AF5C2AA650260065CFC0 /* GetStampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF5B2AA650260065CFC0 /* GetStampViewController.swift */; };
 		D2B7AF5E2AA790970065CFC0 /* StampDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF5D2AA790970065CFC0 /* StampDetailViewController.swift */; };
+		D2B7AF602AA7BBAB0065CFC0 /* LoginParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7AF5F2AA7BBAB0065CFC0 /* LoginParam.swift */; };
 		D2D302932A9B5AED00622DFF /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D302922A9B5AED00622DFF /* APIConstants.swift */; };
 		D2D3029A2A9DDCE500622DFF /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D302992A9DDCE500622DFF /* CustomAnnotation.swift */; };
 		D2EBDD852A865CD30046A5A7 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EBDD842A865CD30046A5A7 /* BaseResponse.swift */; };
@@ -127,6 +128,7 @@
 		D2B7AF592AA608170065CFC0 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		D2B7AF5B2AA650260065CFC0 /* GetStampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStampViewController.swift; sourceTree = "<group>"; };
 		D2B7AF5D2AA790970065CFC0 /* StampDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampDetailViewController.swift; sourceTree = "<group>"; };
+		D2B7AF5F2AA7BBAB0065CFC0 /* LoginParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginParam.swift; sourceTree = "<group>"; };
 		D2D302922A9B5AED00622DFF /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		D2D302992A9DDCE500622DFF /* CustomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		D2EBDD842A865CD30046A5A7 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				D2B7AF322AA38BC60065CFC0 /* Region.swift */,
 				D2B7AF342AA398E00065CFC0 /* Stamp.swift */,
 				D2B7AF382AA39D890065CFC0 /* Challenge.swift */,
+				D2B7AF5F2AA7BBAB0065CFC0 /* LoginParam.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -697,6 +700,7 @@
 				D2B7AF392AA39D890065CFC0 /* Challenge.swift in Sources */,
 				D2D3029A2A9DDCE500622DFF /* CustomAnnotation.swift in Sources */,
 				D2B7AF5A2AA608170065CFC0 /* NetworkResult.swift in Sources */,
+				D2B7AF602AA7BBAB0065CFC0 /* LoginParam.swift in Sources */,
 				D2B7AF4B2AA5832E0065CFC0 /* MyStampViewController.swift in Sources */,
 				D2B7AF332AA38BC60065CFC0 /* Region.swift in Sources */,
 				D2B7AF292A9EDF340065CFC0 /* LoadingIndicator.swift in Sources */,
@@ -896,6 +900,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 97CYTD232Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PaldoPort/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "사용자의 위치정보를 받아오려고 합니다.";
@@ -926,6 +931,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 97CYTD232Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PaldoPort/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "사용자의 위치정보를 받아오려고 합니다.";

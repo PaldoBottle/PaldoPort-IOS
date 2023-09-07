@@ -11,7 +11,9 @@ import UIKit
 
 class ChallengeCollectionViewCell : UICollectionViewCell {
     
+    @IBOutlet weak var haveView: UIView!
     @IBOutlet weak var point: UILabel!
-    @IBOutlet weak var desc: UILabel!
+    @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var name: UILabel!
+    
 }

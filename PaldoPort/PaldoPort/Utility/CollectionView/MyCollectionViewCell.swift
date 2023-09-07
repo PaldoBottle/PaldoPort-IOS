@@ -12,6 +12,8 @@ import Kingfisher
 
 class MyCollectionViewCell : UICollectionViewCell {
     
+    @IBOutlet weak var haveView: UIView!
+    
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var name: UILabel!

@@ -6,7 +6,7 @@ target 'PaldoPort' do
   use_frameworks!
 
   # Pods for PaldoPort
-  pod 'RxKakaoSDK'
+  pod 'KakaoSDK'
   pod 'RxSwift', '6.5.0'
   pod 'RxCocoa', '6.5.0'
   pod 'Alamofire'
